@@ -1,0 +1,74 @@
+"exercices/exercice 03 - challenger le besoin/reponse.md"
+  h_0a88d9aba8622a 1,3,27,37
+"exercices/exercice 12 - usage de l ia/reponse.md"
+  h_0a88d9aba8622a 1,5,14,16,24,26,35,54,56-59,62,74,78-82
+"exercices/exercice 07 - images adaptees et lazy loading/reponse.md"
+  h_0a88d9aba8622a 1,7,16,27,40,53,88,94,102-103,108,112
+"exercices/exercice 09 - sql pagination et indexes/enonce.md"
+  h_0a88d9aba8622a 5-6
+"exercices/exercice 09 - sql pagination et indexes/reponse.md"
+  h_0a88d9aba8622a 1,8,44,47,57,79,99,119,152-156
+"exercices/exercice 01 - mesurer avant d agir/reponse.md"
+  h_0a88d9aba8622a 1,14,20,25,34,47-48,50
+"exercices/exercice 08 - pagination serveur/enonce.md"
+  h_0a88d9aba8622a 5-6,12,14
+"exercices/exercice 06 - polices et composants natifs/reponse.md"
+  h_0a88d9aba8622a 1,68,88,92,97,102-104
+"exercices/exercice 08 - pagination serveur/reponse.md"
+  h_0a88d9aba8622a 1,3,43,46-48,94-97
+"exercices/exercice 07 - images adaptees et lazy loading/enonce.md"
+  h_0a88d9aba8622a 5-6,10,12,65,67
+"exercices/exercice 12 - usage de l ia/enonce.md"
+  h_0a88d9aba8622a 1,5-6,10,20,33,45
+"exercices/exercice 03 - challenger le besoin/enonce.md"
+  h_0a88d9aba8622a 1,5-9,17,43,57
+"exercices/exercice 14 - badge de transparence/enonce.md"
+  h_0a88d9aba8622a 1,5,11,21,28,40-41,67-71,103
+"exercices/exercice 04 - multi-stage builds docker/enonce.md"
+  h_0a88d9aba8622a 1,5-6,10
+"exercices/exercice 14 - badge de transparence/reponse.md"
+  h_0a88d9aba8622a 1,41,77-79,86-88,99-103,136-138,186,195,206,209
+.gitignore
+  h_0a88d9aba8622a 1-2
+"exercices/exercice 04 - multi-stage builds docker/reponse.md"
+  h_0a88d9aba8622a 1,9,26,41,82-85
+"exercices/exercice 01 - mesurer avant d agir/enonce.md"
+  h_0a88d9aba8622a 1,5-6,54
+"exercices/exercice 10 - cache applicatif et n+1/reponse.md"
+  h_0a88d9aba8622a 1,19,75,102-104,110,135,147
+README.md
+  h_0a88d9aba8622a 1,9,15,38,53,66,90-91,97,104,110,117,125,133,141,145,166,185,187
+"exercices/exercice 02 - pari empreinte et acv express/reponse.md"
+  h_0a88d9aba8622a 1,3,30,44
+"exercices/exercice 06 - polices et composants natifs/enonce.md"
+  h_0a88d9aba8622a 5-7,11,15
+"exercices/exercice 02 - pari empreinte et acv express/enonce.md"
+  h_0a88d9aba8622a 5-6,10,14,31,54
+"exercices/exercice 15 - boss final bilan global/final.md"
+  h_0a88d9aba8622a 1,14,70,113,137
+"exercices/exercice 11 - stockage sobre et retention/reponse.md"
+  h_0a88d9aba8622a 1,113,119,123,125-126
+"exercices/exercice 11 - stockage sobre et retention/enonce.md"
+  h_0a88d9aba8622a 5-6,15
+"exercices/exercice 13 - ecoindex dans la ci/reponse.md"
+  h_0a88d9aba8622a 1,99-100,110,135-139
+"exercices/exercice 13 - ecoindex dans la ci/enonce.md"
+  h_0a88d9aba8622a 1,5-6,29,38
+"exercices/exercice 10 - cache applicatif et n+1/enonce.md"
+  h_0a88d9aba8622a 5-6,28,40,47,56,63,99
+"exercices/exercice 05 - hebergement responsable/enonce.md"
+  h_0a88d9aba8622a 1,5-10,71-73
+"exercices/exercice 05 - hebergement responsable/reponse.md"
+  h_0a88d9aba8622a 1,48,54-56,58,79-82
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "e32c8e2bbe3510bc641b1e787ba69be4253c4202",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
