@@ -1,6 +1,6 @@
-# Exercice 8 — Réponse
+# Exercice 8 - Réponse
 
-## Solution — history.ts
+## Solution - history.ts
 
 La correction tient en 3 lignes modifiées :
 
@@ -40,12 +40,12 @@ async function loadPage(page: number): Promise<void> {
 }
 ```
 
-![DevTools Network — après correction : 76.9 KB au lieu de 3.6 MB](../../img/history-apres.webp)
+![DevTools Network - après correction : 76.9 KB au lieu de 3.6 MB](../../img/history-apres.webp)
 
 **Ce qui a changé :**
-1. `getLogs(0, 1000)` → `getLogs(page, PAGE_SIZE)` — ne charge que la page demandée
-2. Plus de `allLogs.slice(start, start + PAGE_SIZE)` — le serveur pagine
-3. `totalLogs = allLogs.length` → `totalLogs = data.totalElements` — le serveur connaît le total
+1. `getLogs(0, 1000)` → `getLogs(page, PAGE_SIZE)` - ne charge que la page demandée
+2. Plus de `allLogs.slice(start, start + PAGE_SIZE)` - le serveur pagine
+3. `totalLogs = allLogs.length` → `totalLogs = data.totalElements` - le serveur connaît le total
 4. `totalPages` vient de `data.totalPages` au lieu d'être calculé
 
 ## Résultats mesurés
@@ -91,10 +91,10 @@ La pagination serveur résout les 3 problèmes en une seule correction frontend.
 
 ## Bonnes pratiques
 
-- **Paginer côté serveur par défaut** — la pagination client n'est justifiée que pour de très petits jeux de données (<50 items)
-- **Le frontend ne doit jamais décider de la taille totale** — c'est le serveur qui connaît le `COUNT`
-- **Taille de page adaptée** — 6 items pour un historique, 20 pour un listing admin, 50 max pour une API
-- **Ce correctif connecte au backend** — l'exercice 9 corrigera le service `getAllLogs()` côté serveur qui avait aussi des problèmes de pagination
+- **Paginer côté serveur par défaut** - la pagination client n'est justifiée que pour de très petits jeux de données (<50 items)
+- **Le frontend ne doit jamais décider de la taille totale** - c'est le serveur qui connaît le `COUNT`
+- **Taille de page adaptée** - 6 items pour un historique, 20 pour un listing admin, 50 max pour une API
+- **Ce correctif connecte au backend** - l'exercice 9 corrigera le service `getAllLogs()` côté serveur qui avait aussi des problèmes de pagination
 
 ## Boîte à outils
 

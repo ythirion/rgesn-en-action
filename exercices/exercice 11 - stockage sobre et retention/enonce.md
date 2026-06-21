@@ -2,8 +2,8 @@
 
 ## Critères RGESN
 
-- **7.2** — Le service stocke-t-il uniquement les données nécessaires ?
-- **2.7** — Existe-t-il une stratégie de décommissionnement des données ?
+- **7.2** - Le service stocke-t-il uniquement les données nécessaires ?
+- **2.7** - Existe-t-il une stratégie de décommissionnement des données ?
 
 ## Contexte
 
@@ -12,7 +12,7 @@ Chaque log de visionnage dans Letterflop stocke l'URL complète de l'affiche TMD
 https://image.tmdb.org/t/p/original/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg
 ```
 
-Si demain on décide d'afficher les vignettes en `w92` au lieu de `original`, il faudrait migrer **toutes les lignes** de la base. Et les données s'accumulent indéfiniment — aucune politique de rétention.
+Si demain on décide d'afficher les vignettes en `w92` au lieu de `original`, il faudrait migrer **toutes les lignes** de la base. Et les données s'accumulent indéfiniment - aucune politique de rétention.
 
 ## Votre mission
 

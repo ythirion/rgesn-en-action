@@ -1,14 +1,14 @@
-# Exercice 14 : Badge de transparence — Le Nutri-Score numérique
+# Exercice 14 : Badge de transparence - Le Nutri-Score numérique
 
 ## Critères RGESN
 
-- **1.5** — Le service numérique a-t-il défini des objectifs de réduction rendus publics ?
+- **1.5** - Le service numérique a-t-il défini des objectifs de réduction rendus publics ?
 
 ## Contexte
 
 On met des Nutri-Scores sur les aliments. Pourquoi pas sur les sites web ?
 
-Afficher un badge EcoIndex sur son service rend l'impact visible — pour les utilisateurs, pour l'équipe, pour soi-même. C'est la version numérique du Nutri-Score : la transparence force l'amélioration, et donne aux utilisateurs un critère de choix qu'ils n'avaient pas.
+Afficher un badge EcoIndex sur son service rend l'impact visible - pour les utilisateurs, pour l'équipe, pour soi-même. C'est la version numérique du Nutri-Score : la transparence force l'amélioration, et donne aux utilisateurs un critère de choix qu'ils n'avaient pas.
 
 Le collectif [cnumr](https://github.com/cnumr) propose un badge EcoIndex officiel, prêt à intégrer.
 
@@ -18,14 +18,14 @@ Le collectif [cnumr](https://github.com/cnumr) propose un badge EcoIndex officie
 
 Ajoutez le badge [ecoindex_badge](https://github.com/cnumr/ecoindex_badge) dans le footer des 3 pages HTML (`index.html`, `movie.html`, `history.html`).
 
-**Option JavaScript (recommandée)** — le badge se met à jour automatiquement :
+**Option JavaScript (recommandée)** - le badge se met à jour automatiquement :
 
 ```html
 <div id="ecoindex-badge" data-theme="dark"></div>
 <script src="https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js" defer></script>
 ```
 
-**Option statique (sans JavaScript)** — badge sous forme d'image SVG :
+**Option statique (sans JavaScript)** - badge sous forme d'image SVG :
 
 ```html
 <a href="https://bff.ecoindex.fr/redirect/?url={votre-url}" target="_blank">
@@ -37,8 +37,8 @@ Ajoutez le badge [ecoindex_badge](https://github.com/cnumr/ecoindex_badge) dans 
 Remplacez `{votre-url}` par l'URL de la page (encodée).
 
 **Caractéristiques du badge :**
-- SVG de **779 octets** — impact minimal sur le poids de page
-- JavaScript de **569 octets** — mis en cache via CDN
+- SVG de **779 octets** - impact minimal sur le poids de page
+- JavaScript de **569 octets** - mis en cache via CDN
 - Cache serveur de **7 jours**
 - `data-theme="dark"` pour le thème sombre de Letterflop
 
@@ -64,11 +64,11 @@ Ajoutez un `<footer>` identique sur les 3 pages, juste avant le `<script>`, cont
 
 Créez `frontend/empreinte.html` avec le même layout que les autres pages. Contenu :
 
-1. **Scores actuels** — tableau avec le score EcoIndex de chaque page (valeurs de l'exercice 13)
-2. **Ce que nous avons optimisé** — résumé des corrections appliquées pendant l'atelier
-3. **Méthodologie** — comment l'EcoIndex est calculé (DOM, requêtes, poids)
-4. **Vérifiez par vous-même** — liens vers [EcoIndex](https://www.ecoindex.fr), [Website Carbon Calculator](https://www.websitecarbon.com), le [RGESN](https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/)
-5. **Notre CI** — lien vers la GitHub Action de l'exercice 13
+1. **Scores actuels** - tableau avec le score EcoIndex de chaque page (valeurs de l'exercice 13)
+2. **Ce que nous avons optimisé** - résumé des corrections appliquées pendant l'atelier
+3. **Méthodologie** - comment l'EcoIndex est calculé (DOM, requêtes, poids)
+4. **Vérifiez par vous-même** - liens vers [EcoIndex](https://www.ecoindex.fr), [Website Carbon Calculator](https://www.websitecarbon.com), le [RGESN](https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/)
+5. **Notre CI** - lien vers la GitHub Action de l'exercice 13
 
 ### 4. Mettre à jour vite.config.ts
 
@@ -100,4 +100,4 @@ Consultez le repo [cnumr/ecoindex_badge](https://github.com/cnumr/ecoindex_badge
 - Le badge se positionne automatiquement dans le `<div id="ecoindex-badge">`
 - L'attribut `data-theme="dark"` adapte le badge au fond sombre
 - Le script doit être chargé avec `defer` pour ne pas bloquer le rendu
-- Si le site n'est pas encore en ligne, le badge affichera un état "non mesuré" — c'est normal en développement local
+- Si le site n'est pas encore en ligne, le badge affichera un état "non mesuré" - c'est normal en développement local

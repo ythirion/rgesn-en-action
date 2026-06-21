@@ -1,9 +1,9 @@
-# Exercice 13 : EcoIndex dans la CI — La sobriété comme métrique
+# Exercice 13 : EcoIndex dans la CI - La sobriété comme métrique
 
 ## Critères RGESN
 
-- **1.4** — Les revues de conception intègrent-elles régulièrement l'écoconception ?
-- **1.5** — Le service numérique a-t-il défini des objectifs de réduction ?
+- **1.4** - Les revues de conception intègrent-elles régulièrement l'écoconception ?
+- **1.5** - Le service numérique a-t-il défini des objectifs de réduction ?
 
 ## Contexte
 
@@ -26,7 +26,7 @@ Notez pour chaque page : le score EcoIndex, la note (A-G), le nombre de requête
 
 On va utiliser la [greenit-analysis-action](https://github.com/ythirion/greenit-analysis-action) pour automatiser cette mesure dans la CI.
 
-**Étape 1** — Créez un fichier `greenit-urls.yaml` à la racine du projet :
+**Étape 1** - Créez un fichier `greenit-urls.yaml` à la racine du projet :
 
 ```yaml
 - name: 'Recherche'
@@ -35,7 +35,7 @@ On va utiliser la [greenit-analysis-action](https://github.com/ythirion/greenit-
   url: 'http://localhost:3000/history.html'
 ```
 
-**Étape 2** — Créez le workflow `.github/workflows/greenit.yml` :
+**Étape 2** - Créez le workflow `.github/workflows/greenit.yml` :
 
 ```yaml
 name: GreenIT Analysis

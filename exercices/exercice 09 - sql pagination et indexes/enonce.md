@@ -2,8 +2,8 @@
 
 ## Critères RGESN
 
-- **7.1** — Le service optimise-t-il les requêtes et traitements côté serveur ?
-- **7.3** — Le service effectue-t-il uniquement les traitements strictement nécessaires ?
+- **7.1** - Le service optimise-t-il les requêtes et traitements côté serveur ?
+- **7.3** - Le service effectue-t-il uniquement les traitements strictement nécessaires ?
 
 ## Contexte
 

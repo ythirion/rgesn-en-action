@@ -1,12 +1,12 @@
-# Exercice 3 : Challenger le besoin — Grille Spécifications RGESN
+# Exercice 3 : Challenger le besoin - Grille Spécifications RGESN
 
 ## Critères RGESN
 
-- **2.3** — Le service numérique fonctionne-t-il sur une connexion lente ou en mode dégradé ?
-- **2.6** — L'impact environnemental a-t-il été évalué avant la mise en production ?
-- **2.7** — Existe-t-il une stratégie de décommissionnement ?
-- **2.9** — L'impact des composants d'interface prêts à l'emploi a-t-il été évalué ?
-- **2.10** — L'impact des services tiers a-t-il été évalué ?
+- **2.3** - Le service numérique fonctionne-t-il sur une connexion lente ou en mode dégradé ?
+- **2.6** - L'impact environnemental a-t-il été évalué avant la mise en production ?
+- **2.7** - Existe-t-il une stratégie de décommissionnement ?
+- **2.9** - L'impact des composants d'interface prêts à l'emploi a-t-il été évalué ?
+- **2.10** - L'impact des services tiers a-t-il été évalué ?
 
 ## Contexte
 
@@ -14,7 +14,7 @@ Le backlog de Letterflop contient 3 user stories. Le product owner les veut tout
 
 ## Votre mission
 
-### Partie 1 — Arbitrage produit avec la grille RGESN (~15 min)
+### Partie 1 - Arbitrage produit avec la grille RGESN (~15 min)
 
 Trois user stories sont en backlog :
 
@@ -40,7 +40,7 @@ Remplissez la grille de décision pour chaque US :
 | **Décision**  | Construire / Reworker / Abandonner ?              |      |      |      |
 ```
 
-### Partie 2 — Reworker US-B (~5 min)
+### Partie 2 - Reworker US-B (~5 min)
 
 US-B n'est pas à abandonner, mais à reworker. Réécrivez-la pour qu'elle respecte le RGESN :
 
@@ -54,7 +54,7 @@ Contraintes de la version reworkée :
 - Image au lieu de vidéo par défaut
 - Chargement à la demande uniquement
 
-### Partie 3 — Audit Stratégie de Letterflop (~10 min)
+### Partie 3 - Audit Stratégie de Letterflop (~10 min)
 
 Auditez la branche `main` de Letterflop contre les 10 critères de la famille Stratégie (1.1 à 1.10) :
 

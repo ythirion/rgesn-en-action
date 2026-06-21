@@ -1,13 +1,13 @@
-# Exercice 5 : Hébergement responsable — Où déployer Letterflop ?
+# Exercice 5 : Hébergement responsable - Où déployer Letterflop ?
 
 ## Critères RGESN
 
-- **8.3** — PUE (Power Usage Effectiveness)
-- **8.4** — WUE (Water Usage Effectiveness)
-- **8.5** — Énergie renouvelable
-- **8.6** — Localisation géographique
-- **8.7** — Récupération de chaleur
-- **8.8** — Données chaudes / froides
+- **8.3** - PUE (Power Usage Effectiveness)
+- **8.4** - WUE (Water Usage Effectiveness)
+- **8.5** - Énergie renouvelable
+- **8.6** - Localisation géographique
+- **8.7** - Récupération de chaleur
+- **8.8** - Données chaudes / froides
 
 ## Contexte
 
@@ -68,6 +68,6 @@ Pas de code dans cet exercice. Utilisez les sources ci-dessous et remplissez les
 ## Sources à consulter
 
 - Pages "Sustainability" / "Environnement" des hébergeurs
-- [Electricity Maps](https://www.electricitymaps.com) — intensité carbone en temps réel par pays
-- [Green Web Foundation](https://www.thegreenwebfoundation.org) — vérifier si un domaine est hébergé "vert"
-- [Uptime Institute](https://uptimeinstitute.com) — benchmark mondial des datacenters
+- [Electricity Maps](https://www.electricitymaps.com) - intensité carbone en temps réel par pays
+- [Green Web Foundation](https://www.thegreenwebfoundation.org) - vérifier si un domaine est hébergé "vert"
+- [Uptime Institute](https://uptimeinstitute.com) - benchmark mondial des datacenters

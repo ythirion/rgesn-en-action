@@ -1,4 +1,4 @@
-# Exercice 1 — Réponse
+# Exercice 1 - Réponse
 
 ## Valeurs attendues
 
@@ -11,18 +11,18 @@
 | db        | postgres:15          | ~445 MB  |
 | **Total** |                      | **~2.63 GB** |
 
-### Réseau — Recherche "Matrix"
+### Réseau - Recherche "Matrix"
 
 - **~20+ requêtes** dont les images TMDB en taille `original` (~500 KB chacune)
 - **~4-5 MB transférés** pour une grille de vignettes de 200 px
 - **Domaines externes** : `image.tmdb.org`, potentiellement `fonts.googleapis.com` et `fonts.gstatic.com`
 
-### Réseau — Page historique
+### Réseau - Page historique
 
 - **1 requête XHR** vers `/api/logs` qui ramène **1000 logs** complets (avec synopsis TEXT) pour en afficher 6
 - Chaque changement de page relance cette même requête
 
-### API — benchmark.sh
+### API - benchmark.sh
 
 | Endpoint              | req/s attendu | Commentaire |
 |-----------------------|---------------|-------------|
@@ -31,7 +31,7 @@
 
 ## Ce que la mesure vérifie
 
-Sans baseline, toute amélioration est anecdotique. Le RGESN 1.5 demande de **définir des objectifs de réduction** — impossible sans point de départ chiffré.
+Sans baseline, toute amélioration est anecdotique. Le RGESN 1.5 demande de **définir des objectifs de réduction** - impossible sans point de départ chiffré.
 
 ## Pourquoi c'est important
 
@@ -44,10 +44,10 @@ Chacun de ces chiffres cache une ou plusieurs violations du RGESN que vous allez
 
 ## Bonnes pratiques
 
-- **Toujours mesurer avant et après** — sans mesure, pas de progrès, et surtout pas de régression détectée
-- **Utiliser des outils complémentaires** — Docker CLI pour l'infra, DevTools pour le réseau, benchmarks pour l'API, EcoIndex pour la vision globale
+- **Toujours mesurer avant et après** - sans mesure, pas de progrès, et surtout pas de régression détectée
+- **Utiliser des outils complémentaires** - Docker CLI pour l'infra, DevTools pour le réseau, benchmarks pour l'API, EcoIndex pour la vision globale
 - **Désactiver le cache navigateur** pendant les mesures pour voir les vrais transferts
-- **Conserver les résultats** — vous les réutiliserez à l'exercice 15
+- **Conserver les résultats** - vous les réutiliserez à l'exercice 15
 
 ## Boîte à outils
 

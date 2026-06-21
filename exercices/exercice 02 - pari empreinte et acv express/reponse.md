@@ -1,6 +1,6 @@
-# Exercice 2 — Réponse
+# Exercice 2 - Réponse
 
-## Partie 1 — Corrections du pari empreinte
+## Partie 1 - Corrections du pari empreinte
 
 | # | Situation                                               | Réponse          | Équiv. voiture |
 |---|---------------------------------------------------------|------------------|----------------|
@@ -27,7 +27,7 @@
 - Carbon Trust 2021 (visioconférence)
 - Google Sustainability Report 2023
 
-## Partie 2 — Mini-ACV de Letterflop
+## Partie 2 - Mini-ACV de Letterflop
 
 Avec les données observées à l'exercice 1 (page recherche ~4.5 MB, fiche film ~1 MB, historique ~0.5 MB, POST log ~2 KB) :
 
@@ -41,7 +41,7 @@ Avec les données observées à l'exercice 1 (page recherche ~4.5 MB, fiche film
 
 La recherche domine massivement l'empreinte à cause des images surdimensionnées (taille `original`).
 
-## Partie 3 — Comparaison des features
+## Partie 3 - Comparaison des features
 
 | Feature                  | CO2e / utilisation | Utilisations/jour | CO2e/an            |
 |--------------------------|--------------------|--------------------|---------------------|

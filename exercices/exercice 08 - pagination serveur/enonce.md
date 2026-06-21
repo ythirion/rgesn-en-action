@@ -2,16 +2,16 @@
 
 ## Critères RGESN
 
-- **6.5** — Le service charge-t-il uniquement les ressources strictement nécessaires ?
-- **7.1** — Le service optimise-t-il les requêtes et traitements côté serveur ?
+- **6.5** - Le service charge-t-il uniquement les ressources strictement nécessaires ?
+- **7.1** - Le service optimise-t-il les requêtes et traitements côté serveur ?
 
 ## Contexte
 
 La page Historique demande **1000 logs** au serveur pour en afficher **6**. À chaque changement de page (Précédent / Suivant), elle redemande les 1000 logs, les filtre côté client, et jette les 994 inutiles.
 
-![DevTools Network — page historique avant correction : 3.6 MB, Google Fonts, 1000 logs](../../img/history-avant.webp)
+![DevTools Network - page historique avant correction : 3.6 MB, Google Fonts, 1000 logs](../../img/history-avant.webp)
 
-Le backend supporte déjà la pagination via Spring Data (`Pageable`) — le frontend ne l'utilise simplement pas.
+Le backend supporte déjà la pagination via Spring Data (`Pageable`) - le frontend ne l'utilise simplement pas.
 
 ## Votre mission
 

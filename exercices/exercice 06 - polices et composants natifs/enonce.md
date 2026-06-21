@@ -2,17 +2,17 @@
 
 ## Critères RGESN
 
-- **4.5** — Le service utilise-t-il des composants d'interface natifs plutôt que personnalisés ?
-- **4.8** — Le service limite-t-il le téléchargement de polices ?
-- **6.7** — Les ressources sont-elles hébergées sur le même domaine ?
+- **4.5** - Le service utilise-t-il des composants d'interface natifs plutôt que personnalisés ?
+- **4.8** - Le service limite-t-il le téléchargement de polices ?
+- **6.7** - Les ressources sont-elles hébergées sur le même domaine ?
 
 ## Contexte
 
-![DevTools Network — requêtes avant correction (Google Fonts visible)](../../img/requests-avant.webp)
+![DevTools Network - requêtes avant correction (Google Fonts visible)](../../img/requests-avant.webp)
 
 Avant même de taper un caractère dans la barre de recherche, Letterflop fait des requêtes vers Google pour télécharger une police web. Chaque visite paie ce coût : DNS, TCP, TLS, téléchargement de la police, parsing, application. Et tout ça pour afficher du texte que la police système du navigateur sait déjà rendre.
 
-De plus, le widget de notation par étoiles sur la page film utilise des `<span>` avec des événements `mouseenter`/`mouseleave`/`click` — inaccessible au clavier et inutilement complexe.
+De plus, le widget de notation par étoiles sur la page film utilise des `<span>` avec des événements `mouseenter`/`mouseleave`/`click` - inaccessible au clavier et inutilement complexe.
 
 ## Votre mission
 

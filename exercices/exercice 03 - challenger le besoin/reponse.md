@@ -1,6 +1,6 @@
-# Exercice 3 — Réponse
+# Exercice 3 - Réponse
 
-## Partie 1 — Grille de décision
+## Partie 1 - Grille de décision
 
 | Critère RGESN | Question                                   | US-A        | US-B       | US-C       |
 |---------------|--------------------------------------------|-------------|------------|------------|
@@ -24,7 +24,7 @@ Avec 100 utilisateurs actifs et un taux de réutilisation de 3 générations par
 
 À l'échelle de 1 million d'utilisateurs quotidiens, US-A représenterait ~5 840 tonnes de CO2e par an. US-C : ~3.65 tonnes.
 
-## Partie 2 — US-B reworkée
+## Partie 2 - US-B reworkée
 
 > En tant qu'utilisateur, je veux pouvoir **consulter la bande-annonce d'un film en cliquant sur un bouton "Voir la bande-annonce"**, affichée en qualité standard par défaut, avec la possibilité de passer en HD.
 
@@ -34,7 +34,7 @@ Corrections RGESN :
 - **Qualité standard par défaut** → l'utilisateur choisit la HD s'il le souhaite
 - **Lazy loading** de l'iframe YouTube uniquement au clic
 
-## Partie 3 — Audit Stratégie de Letterflop
+## Partie 3 - Audit Stratégie de Letterflop
 
 | #    | Critère                                                        | Conforme ?   | Commentaire |
 |------|----------------------------------------------------------------|:------------:|-------------|

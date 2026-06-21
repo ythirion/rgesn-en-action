@@ -1,4 +1,4 @@
-# Exercice 6 — Réponse
+# Exercice 6 - Réponse
 
 ## 1. Suppression de Google Fonts
 
@@ -65,7 +65,7 @@ Dans `index.html`, remplacer :
 
 ## Résultats mesurés
 
-![DevTools Network — après correction : plus de requête Google Fonts](../../img/requests-apres.webp)
+![DevTools Network - après correction : plus de requête Google Fonts](../../img/requests-apres.webp)
 
 | Métrique                | Avant       | Après    | Gain     |
 |-------------------------|-------------|----------|----------|
@@ -85,23 +85,23 @@ DevTools → Network → filtre "fonts.googleapis.com" → 0 résultats
 **Google Fonts :**
 - Chaque visite télécharge la police (~100 KB, 2-4 requêtes, 2 domaines externes)
 - `display=block` bloque le rendu de tout le texte jusqu'au chargement
-- La police est un choix esthétique, pas fonctionnel — `system-ui` est déjà optimisé pour chaque OS
+- La police est un choix esthétique, pas fonctionnel - `system-ui` est déjà optimisé pour chaque OS
 
 **Composants natifs :**
 - Un `<input type="radio">` est nativement accessible au clavier, aux lecteurs d'écran, et aux technologies d'assistance
-- Un widget custom en JavaScript nécessite des événements, du state management, et des attributs ARIA manuels — pour un résultat fonctionnellement identique
+- Un widget custom en JavaScript nécessite des événements, du state management, et des attributs ARIA manuels - pour un résultat fonctionnellement identique
 - Le RGESN 4.5 recommande explicitement les composants natifs quand ils existent
 
 **Focus visible :**
 - `focus:outline-none` est l'une des violations d'accessibilité les plus courantes
-- Un utilisateur au clavier ne peut pas savoir où il se trouve sur la page — violation WCAG 2.4.7
+- Un utilisateur au clavier ne peut pas savoir où il se trouve sur la page - violation WCAG 2.4.7
 - L'accessibilité fait partie du numérique responsable (volet sociétal)
 
 ## Bonnes pratiques
 
-- **`system-ui` par défaut** — n'ajouter une police web que si la charte graphique l'exige absolument
-- **Composant natif d'abord** — n'écrire un widget custom que si aucun élément HTML natif ne fait le travail
-- **Jamais `focus:outline-none` seul** — toujours fournir un indicateur de focus alternatif
+- **`system-ui` par défaut** - n'ajouter une police web que si la charte graphique l'exige absolument
+- **Composant natif d'abord** - n'écrire un widget custom que si aucun élément HTML natif ne fait le travail
+- **Jamais `focus:outline-none` seul** - toujours fournir un indicateur de focus alternatif
 - **`aria-label`** sur tout élément interactif sans texte visible
 
 ## Boîte à outils

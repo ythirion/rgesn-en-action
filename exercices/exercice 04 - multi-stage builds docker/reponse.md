@@ -1,4 +1,4 @@
-# Exercice 4 — Réponse
+# Exercice 4 - Réponse
 
 ## Diagnostic
 
@@ -6,7 +6,7 @@
 - **`npm start` (Vite dev server)** en production : hot-reload activé, pas de compression, pas de cache HTTP, sourcemaps exposées. Un serveur de développement n'a rien à faire en production.
 - **JDK vs JRE** : le JDK contient le compilateur (`javac`) + le JRE. Le JRE contient uniquement la JVM pour exécuter du bytecode. En production, seul le JRE est nécessaire.
 
-## Solution — backend/Dockerfile
+## Solution - backend/Dockerfile
 
 ```dockerfile
 FROM maven:3.9-eclipse-temurin-25-alpine AS build
@@ -23,7 +23,7 @@ EXPOSE 8080
 CMD ["java", "-jar", "app.jar"]
 ```
 
-## Solution — frontend/Dockerfile
+## Solution - frontend/Dockerfile
 
 ```dockerfile
 FROM node:24.15.0-alpine AS build
@@ -38,7 +38,7 @@ COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
 ```
 
-## Solution — docker-compose.yml (extrait)
+## Solution - docker-compose.yml (extrait)
 
 ```yaml
 frontend:
@@ -79,10 +79,10 @@ Le total doit passer sous les 800 MB.
 
 ## Bonnes pratiques
 
-- **Multi-stage build par défaut** — il n'y a aucune raison de ne pas l'utiliser
-- **Toujours Alpine** — les variantes Alpine sont 5-10× plus légères
-- **JDK pour builder, JRE pour exécuter** — ne jamais expédier le compilateur en production
-- **Séparer build et serve** — le code source et `node_modules` n'ont rien à faire dans l'image de production
+- **Multi-stage build par défaut** - il n'y a aucune raison de ne pas l'utiliser
+- **Toujours Alpine** - les variantes Alpine sont 5-10× plus légères
+- **JDK pour builder, JRE pour exécuter** - ne jamais expédier le compilateur en production
+- **Séparer build et serve** - le code source et `node_modules` n'ont rien à faire dans l'image de production
 
 ## Boîte à outils
 

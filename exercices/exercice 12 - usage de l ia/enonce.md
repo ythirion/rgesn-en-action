@@ -1,13 +1,13 @@
-# Exercice 12 : Usage de l'IA — Quand l'IA est légitime
+# Exercice 12 : Usage de l'IA - Quand l'IA est légitime
 
 ## Critères RGESN
 
-- **2.10** — L'impact des services tiers a-t-il été évalué ?
-- **2.6** — L'impact environnemental a-t-il été évalué avant la mise en production ?
+- **2.10** - L'impact des services tiers a-t-il été évalué ?
+- **2.6** - L'impact environnemental a-t-il été évalué avant la mise en production ?
 
 ## Contexte
 
-L'équipe Letterflop envisage d'ajouter 3 fonctionnalités qui pourraient utiliser l'IA. L'IA n'est pas l'ennemie — son usage par défaut, sans questionnement, l'est.
+L'équipe Letterflop envisage d'ajouter 3 fonctionnalités qui pourraient utiliser l'IA. L'IA n'est pas l'ennemie - son usage par défaut, sans questionnement, l'est.
 
 La question n'est pas "peut-on utiliser l'IA ?" mais **"l'IA est-elle la bonne réponse à ce problème précis, ou existe-t-il une alternative déterministe plus sobre ?"**
 
@@ -17,7 +17,7 @@ La question n'est pas "peut-on utiliser l'IA ?" mais **"l'IA est-elle la bonne r
 
 Pour chaque scénario, décidez si l'IA est justifiée et estimez le coût comparé :
 
-**Scénario A — Recommandation de films similaires**
+**Scénario A - Recommandation de films similaires**
 > "Quand l'utilisateur consulte la fiche d'un film, lui recommander 5 films similaires."
 
 ```markdown
@@ -30,7 +30,7 @@ Décision :                      IA / Déterministe / Hybride
 Justification :
 ```
 
-**Scénario B — Analyse de sentiment des commentaires**
+**Scénario B - Analyse de sentiment des commentaires**
 > "Analyser automatiquement le sentiment (positif/négatif) de chaque commentaire pour afficher un emoji."
 
 ```markdown
@@ -42,7 +42,7 @@ Décision :                      IA / Déterministe / Pas nécessaire
 Justification :
 ```
 
-**Scénario C — Résumé annuel de visionnage**
+**Scénario C - Résumé annuel de visionnage**
 > "En fin d'année, générer un résumé personnalisé des habitudes de visionnage de l'utilisateur."
 
 ```markdown

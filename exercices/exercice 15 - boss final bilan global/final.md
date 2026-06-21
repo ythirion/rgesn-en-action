@@ -1,4 +1,4 @@
-# Exercice 15 : Le boss final — Bilan global
+# Exercice 15 : Le boss final - Bilan global
 
 ## Toutes les familles RGESN
 
@@ -11,7 +11,7 @@ Vous avez traversé les 8 familles techniques du RGESN. Il est temps de mesurer 
 Reprenez le tableau de baseline de l'exercice 1 et remplissez la colonne "Après" :
 
 ```markdown
-## Bilan Letterflop — Avant / Après
+## Bilan Letterflop - Avant / Après
 
 ### Images Docker
 | Service   | Avant      | Après      | Gain    |
@@ -67,7 +67,7 @@ Auditez Letterflop corrigé contre les 8 familles :
 Rédigez un rapport d'une page suivant cette structure :
 
 ```markdown
-# Rapport d'écoconception — Letterflop
+# Rapport d'écoconception - Letterflop
 
 ## Contexte
 [Pourquoi cet audit ? Quel est le service ? Quelle est son utilité ?]
@@ -110,7 +110,7 @@ Si tous les exercices ont été correctement réalisés :
 | Appels TMDB (2ème recherche)    | 21-41        | 0            | **−100 %**  |
 | EcoIndex                        | D-E          | A-B          | **+2-3 notes** |
 
-## Ce que les outils couvrent — et ce qu'ils ne couvrent pas
+## Ce que les outils couvrent - et ce qu'ils ne couvrent pas
 
 Les outils automatisés (EcoIndex, benchmark, Docker) couvrent **~30-40% des critères RGESN**. Le reste relève de décisions qui ne peuvent pas être automatisées :
 
@@ -134,7 +134,7 @@ C'est exactement le même constat que pour l'accessibilité : les outils automat
 
 Pas 10. Pas "tout à la fois". Deux. C'est assez pour commencer, et c'est assez pour que ça tienne.
 
-Des logiciels bien conçus *et* sobres, ça ne se décrète pas — ça se pratique.
+Des logiciels bien conçus *et* sobres, ça ne se décrète pas - ça se pratique.
 
 ## Commandes de validation finale
 

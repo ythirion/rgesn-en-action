@@ -2,14 +2,14 @@
 
 ## Critères RGESN
 
-- **6.4** — Les médias sont-ils adaptés au contexte d'affichage ?
-- **6.5** — Le service charge-t-il uniquement les ressources strictement nécessaires ?
+- **6.4** - Les médias sont-ils adaptés au contexte d'affichage ?
+- **6.5** - Le service charge-t-il uniquement les ressources strictement nécessaires ?
 
 ## Contexte
 
-Une recherche "Matrix" charge 20 affiches en taille `original` — jusqu'à 500 KB par image, soit **~4.5 MB** pour des vignettes affichées en 200 px. TMDB propose pourtant des tailles adaptées : `w185`, `w342`, `w500`.
+Une recherche "Matrix" charge 20 affiches en taille `original` - jusqu'à 500 KB par image, soit **~4.5 MB** pour des vignettes affichées en 200 px. TMDB propose pourtant des tailles adaptées : `w185`, `w342`, `w500`.
 
-![DevTools Network — 21 requêtes, 4.5 MB transférés pour la recherche "Matrix"](../../img/network-matrix.webp)
+![DevTools Network - 21 requêtes, 4.5 MB transférés pour la recherche "Matrix"](../../img/network-matrix.webp)
 
 De plus, les 20 images se téléchargent simultanément au chargement, même celles hors écran. Et aucune n'a d'attribut `alt` significatif ni de dimensions explicites.
 
@@ -62,6 +62,6 @@ Après correction, recherchez "Matrix" et observez dans DevTools Network (filtre
 
 ## Indice
 
-- Dans `TmdbService.java`, cherchez `"https://image.tmdb.org/t/p/"` — c'est là que la taille est spécifiée
+- Dans `TmdbService.java`, cherchez `"https://image.tmdb.org/t/p/"` - c'est là que la taille est spécifiée
 - Tailles TMDB disponibles : `w92`, `w154`, `w185`, `w342`, `w500`, `w780`, `original`
-- `loading="lazy"` est un attribut HTML standard — pas de JavaScript requis
+- `loading="lazy"` est un attribut HTML standard - pas de JavaScript requis

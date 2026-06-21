@@ -1,4 +1,4 @@
-# Exercice 11 — Réponse
+# Exercice 11 - Réponse
 
 ## 1. Stockage du chemin uniquement
 
@@ -110,20 +110,20 @@ docker exec -i letter-flop-db-1 psql -U postgres -d letterflop -c \
 **Stockage canonique :**
 - L'URL complète contient une décision d'affichage (`original`, `w342`) mêlée à la donnée (`/pB8BM...jpg`)
 - Changer la taille d'affichage nécessiterait une migration de toutes les lignes
-- Le chemin seul est la donnée — la taille est une décision de présentation, gérée dans `toDto()`
+- Le chemin seul est la donnée - la taille est une décision de présentation, gérée dans `toDto()`
 - Bonus : le chemin est plus court → moins de stockage par ligne
 
 **Rétention :**
 - Sans politique de rétention, les données croissent indéfiniment
 - Chaque octet stocké "chaud" (PostgreSQL actif) coûte 10× plus en énergie que du stockage froid
-- Le RGESN 2.7 demande une stratégie de décommissionnement — les données obsolètes en font partie
+- Le RGESN 2.7 demande une stratégie de décommissionnement - les données obsolètes en font partie
 
 ## Bonnes pratiques
 
-- **Stocker la donnée, pas la décision d'affichage** — séparer le "quoi" du "comment"
+- **Stocker la donnée, pas la décision d'affichage** - séparer le "quoi" du "comment"
 - **Centraliser la construction d'URL** dans une constante ou un service
-- **Politique de rétention dès le jour 1** — pas quand la base fait 500 Go
-- **Migrations SQL versionnées** — Flyway ou Liquibase pour la production
+- **Politique de rétention dès le jour 1** - pas quand la base fait 500 Go
+- **Migrations SQL versionnées** - Flyway ou Liquibase pour la production
 
 ## Boîte à outils
 

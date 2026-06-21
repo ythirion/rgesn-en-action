@@ -1,11 +1,11 @@
-# Exercice 9 — Réponse
+# Exercice 9 - Réponse
 
 ## 1. Diagnostic de getAllLogs()
 
 Dans la branche violations, `getAllLogs()` contient :
 
 ```java
-// AVANT — 3 full table scans pour une seule requête HTTP
+// AVANT - 3 full table scans pour une seule requête HTTP
 public Page<MovieLogDto> getAllLogs(int page, int size) {
     // Full table scan #1 : charger tous les logs
     List<MovieLog> allLogs = repository.findAllOrderByWatchedAtDesc();
@@ -41,10 +41,10 @@ public Page<MovieLogDto> getAllLogs(int page, int size) {
 **Réponses :**
 - Nombre de requêtes SQL : **3** (2 × findAll + 1 × findAll pour le count)
 - Pagination : **Java** (subList après chargement complet)
-- Count : **findAll().size()** — charge toutes les entités en mémoire
+- Count : **findAll().size()** - charge toutes les entités en mémoire
 - Full table scans : **3** par requête HTTP
 
-## 2. Solution — MovieLogRepository.java
+## 2. Solution - MovieLogRepository.java
 
 ```java
 @Repository
@@ -54,7 +54,7 @@ public interface MovieLogRepository extends JpaRepository<MovieLog, Long> {
 }
 ```
 
-## 3. Solution — MovieLogService.java
+## 3. Solution - MovieLogService.java
 
 ```java
 public Page<MovieLogDto> getAllLogs(int page, int size) {
@@ -76,7 +76,7 @@ SELECT COUNT(*) FROM movie_logs;
 
 **2 requêtes SQL** au lieu de 3, et surtout **aucun chargement complet en mémoire**.
 
-## 4. Solution — Indexes
+## 4. Solution - Indexes
 
 ```sql
 -- db/updates/add_indexes.sql
@@ -96,7 +96,7 @@ CREATE INDEX IF NOT EXISTS idx_movie_logs_watched_at ON movie_logs (watched_at D
 | 10 000           | 10 000 lectures      | 14 lectures           | 714×    |
 | 1 000 000        | 1 000 000 lectures   | 20 lectures           | 50 000× |
 
-## 5. Solution — toDto() unifié
+## 5. Solution - toDto() unifié
 
 ```java
 private MovieLogDto toDto(MovieLog log) {
@@ -116,7 +116,7 @@ private MovieLogDto toDto(MovieLog log) {
 }
 ```
 
-Utilisé partout via `this::toDto` ou `.map(this::toDto)` — zéro duplication.
+Utilisé partout via `this::toDto` ou `.map(this::toDto)` - zéro duplication.
 
 ## Résultats mesurés (benchmark.sh)
 
@@ -149,11 +149,11 @@ Tout cela pour un résultat fonctionnellement identique.
 
 ## Bonnes pratiques
 
-- **Pageable Spring Data par défaut** — ne jamais charger `findAll()` pour paginer en Java
-- **`count()` au lieu de `findAll().size()`** — la base sait compter sans instancier d'objets
-- **Indexes sur les colonnes triées et filtrées** — `ORDER BY` sans index = full table scan
-- **Un seul mapping entity→DTO** — factoriser dans une méthode `toDto()` référencée partout
-- **`.map()` sur un `Page<>`** — préserve la pagination sans créer de liste intermédiaire
+- **Pageable Spring Data par défaut** - ne jamais charger `findAll()` pour paginer en Java
+- **`count()` au lieu de `findAll().size()`** - la base sait compter sans instancier d'objets
+- **Indexes sur les colonnes triées et filtrées** - `ORDER BY` sans index = full table scan
+- **Un seul mapping entity→DTO** - factoriser dans une méthode `toDto()` référencée partout
+- **`.map()` sur un `Page<>`** - préserve la pagination sans créer de liste intermédiaire
 
 ## Boîte à outils
 

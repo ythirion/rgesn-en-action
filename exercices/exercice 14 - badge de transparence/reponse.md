@@ -1,4 +1,4 @@
-# Exercice 14 — Réponse
+# Exercice 14 - Réponse
 
 ## 1. Badge EcoIndex officiel en footer
 
@@ -38,7 +38,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Letterflop — Notre empreinte</title>
+  <title>Letterflop - Notre empreinte</title>
   <link rel="stylesheet" href="/src/style.css" />
 </head>
 <body class="bg-neutral-950 text-white min-h-screen" style="font-family: system-ui, -apple-system, sans-serif;">
@@ -74,18 +74,18 @@
               <td class="text-center py-3 px-4">
                 <span class="bg-green-600 text-white text-xs font-bold rounded-full px-2 py-0.5">A</span>
               </td>
-              <td class="text-right py-3 px-4">— KB</td>
-              <td class="text-right py-3 px-4">—</td>
-              <td class="text-right py-3 pl-4">—</td>
+              <td class="text-right py-3 px-4">- KB</td>
+              <td class="text-right py-3 px-4">-</td>
+              <td class="text-right py-3 pl-4">-</td>
             </tr>
             <tr class="border-b border-neutral-900">
               <td class="py-3 pr-4">Historique</td>
               <td class="text-center py-3 px-4">
                 <span class="bg-green-600 text-white text-xs font-bold rounded-full px-2 py-0.5">A</span>
               </td>
-              <td class="text-right py-3 px-4">— KB</td>
-              <td class="text-right py-3 px-4">—</td>
-              <td class="text-right py-3 pl-4">—</td>
+              <td class="text-right py-3 px-4">- KB</td>
+              <td class="text-right py-3 px-4">-</td>
+              <td class="text-right py-3 pl-4">-</td>
             </tr>
           </tbody>
         </table>
@@ -96,11 +96,11 @@
     <section class="mb-12">
       <h2 class="text-lg font-semibold mb-4 text-neutral-300">Ce que nous avons optimisé</h2>
       <ul class="text-neutral-400 text-sm space-y-2">
-        <li><strong>Images</strong> — tailles adaptées au contexte d'affichage, lazy loading (−95% de transfert)</li>
-        <li><strong>Polices</strong> — polices système, zéro requête vers Google Fonts</li>
-        <li><strong>Données</strong> — pagination serveur, cache API, indexes SQL</li>
-        <li><strong>Infrastructure</strong> — images Docker optimisées (−80%)</li>
-        <li><strong>Accessibilité</strong> — composants natifs, navigation clavier, alt texts</li>
+        <li><strong>Images</strong> - tailles adaptées au contexte d'affichage, lazy loading (−95% de transfert)</li>
+        <li><strong>Polices</strong> - polices système, zéro requête vers Google Fonts</li>
+        <li><strong>Données</strong> - pagination serveur, cache API, indexes SQL</li>
+        <li><strong>Infrastructure</strong> - images Docker optimisées (−80%)</li>
+        <li><strong>Accessibilité</strong> - composants natifs, navigation clavier, alt texts</li>
       </ul>
     </section>
 
@@ -133,9 +133,9 @@
     <section>
       <h2 class="text-lg font-semibold mb-4 text-neutral-300">Vérifiez par vous-même</h2>
       <ul class="text-neutral-400 text-sm space-y-2">
-        <li><a href="https://www.ecoindex.fr" class="text-red-500 no-underline">EcoIndex</a> — score d'écoconception</li>
-        <li><a href="https://www.websitecarbon.com" class="text-red-500 no-underline">Website Carbon Calculator</a> — estimation CO2 par visite</li>
-        <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" class="text-red-500 no-underline">RGESN</a> — le référentiel officiel français</li>
+        <li><a href="https://www.ecoindex.fr" class="text-red-500 no-underline">EcoIndex</a> - score d'écoconception</li>
+        <li><a href="https://www.websitecarbon.com" class="text-red-500 no-underline">Website Carbon Calculator</a> - estimation CO2 par visite</li>
+        <li><a href="https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/" class="text-red-500 no-underline">RGESN</a> - le référentiel officiel français</li>
       </ul>
     </section>
   </main>
@@ -183,7 +183,7 @@ export default defineConfig({
 
 ### L'analogie Nutri-Score
 
-Quand le Nutri-Score est devenu visible sur les emballages alimentaires, les industriels ont reformulé leurs produits. Pas par conviction — par pression de transparence. Un "E" rouge sur un paquet de céréales fait fuir les clients.
+Quand le Nutri-Score est devenu visible sur les emballages alimentaires, les industriels ont reformulé leurs produits. Pas par conviction - par pression de transparence. Un "E" rouge sur un paquet de céréales fait fuir les clients.
 
 Le même mécanisme fonctionne pour les sites web :
 - Un badge **A** vert valorise le travail de l'équipe
@@ -192,7 +192,7 @@ Le même mécanisme fonctionne pour les sites web :
 
 ### Le badge doit être honnête
 
-Le badge officiel cnumr interroge directement l'API EcoIndex — il affiche le **vrai score**, pas une valeur choisie. Impossible de tricher. C'est la force du système : la transparence ne fonctionne que si elle est authentique.
+Le badge officiel cnumr interroge directement l'API EcoIndex - il affiche le **vrai score**, pas une valeur choisie. Impossible de tricher. C'est la force du système : la transparence ne fonctionne que si elle est authentique.
 
 ### Sobriété du badge lui-même
 
@@ -203,10 +203,10 @@ Le badge cnumr est un modèle de sobriété :
 
 ## Bonnes pratiques
 
-- **Utiliser le badge officiel cnumr** plutôt qu'un badge custom — il est maintenu, standardisé, et interroge l'API réelle
+- **Utiliser le badge officiel cnumr** plutôt qu'un badge custom - il est maintenu, standardisé, et interroge l'API réelle
 - **`data-theme="dark"`** pour s'adapter au design de Letterflop
 - **`defer`** sur le script pour ne pas bloquer le rendu de la page
-- **Page dédiée plutôt que tooltip** — plus d'espace pour expliquer la méthodologie et les engagements
+- **Page dédiée plutôt que tooltip** - plus d'espace pour expliquer la méthodologie et les engagements
 
 ## Boîte à outils
 

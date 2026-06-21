@@ -1,4 +1,4 @@
-# Exercice 5 — Réponse
+# Exercice 5 - Réponse
 
 ## Panorama des hébergeurs
 
@@ -45,17 +45,17 @@ movie_logs
     └── > 24 mois  ──► Suppression ou export RGPD à la demande
 ```
 
-Héberger des années de logs dans PostgreSQL "chaud" coûte 10× plus cher — en argent et en énergie — que dans un stockage froid.
+Héberger des années de logs dans PostgreSQL "chaud" coûte 10× plus cher - en argent et en énergie - que dans un stockage froid.
 
 ## Recommandation pour Letterflop
 
 Pour un projet de cette taille (petite application, trafic limité) :
 
-- **Option souveraine** : Scaleway ou Infomaniak — transparence maximale, 100% renouvelable, RGPD natif
-- **Option pragmatique** : OVHcloud `GRA` (Gravelines) — PUE 1.09, infrastructure FR, prix compétitifs
-- **Option hyperscaler** : GCP `europe-west9` (Paris) — meilleur dashboard carbone
+- **Option souveraine** : Scaleway ou Infomaniak - transparence maximale, 100% renouvelable, RGPD natif
+- **Option pragmatique** : OVHcloud `GRA` (Gravelines) - PUE 1.09, infrastructure FR, prix compétitifs
+- **Option hyperscaler** : GCP `europe-west9` (Paris) - meilleur dashboard carbone
 
-**Dans tous les cas : éviter les régions US par défaut** — c'est la décision la plus simple et la plus impactante.
+**Dans tous les cas : éviter les régions US par défaut** - c'est la décision la plus simple et la plus impactante.
 
 ## Ce que la mesure vérifie
 
@@ -76,10 +76,10 @@ Cela couvre 80% des critères d'hébergement du RGESN.
 
 ## Bonnes pratiques
 
-- **`us-east-1` par défaut est l'anti-pattern le plus répandu** — il suffit de changer la région pour diviser l'impact par 5-7
-- **Demander si l'énergie est en consommation directe ou en certificats (RECs/GOs)** — la nuance est énorme
-- **PUE + WUE sont complémentaires** — un bon PUE obtenu par évaporation peut cacher un mauvais WUE
-- **Le stockage froid commence dans le code** — la politique de rétention (7.2) est le pendant applicatif du critère 8.8
+- **`us-east-1` par défaut est l'anti-pattern le plus répandu** - il suffit de changer la région pour diviser l'impact par 5-7
+- **Demander si l'énergie est en consommation directe ou en certificats (RECs/GOs)** - la nuance est énorme
+- **PUE + WUE sont complémentaires** - un bon PUE obtenu par évaporation peut cacher un mauvais WUE
+- **Le stockage froid commence dans le code** - la politique de rétention (7.2) est le pendant applicatif du critère 8.8
 
 ## Boîte à outils
 

@@ -1,10 +1,10 @@
-# Exercice 7 — Réponse
+# Exercice 7 - Réponse
 
 ## 1. Tailles d'images TMDB
 
 Dans `TmdbService.java` :
 
-**searchMovies()** — vignettes de liste :
+**searchMovies()** - vignettes de liste :
 ```java
 // AVANT
 dto.setPosterPath(rawPoster != null ? "https://image.tmdb.org/t/p/original" + rawPoster : null);
@@ -13,7 +13,7 @@ dto.setPosterPath(rawPoster != null ? "https://image.tmdb.org/t/p/original" + ra
 dto.setPosterPath(rawPoster != null ? "https://image.tmdb.org/t/p/w185" + rawPoster : null);
 ```
 
-**getMovieDetail()** — fiche film :
+**getMovieDetail()** - fiche film :
 ```java
 // AVANT
 dto.setPosterPath("https://image.tmdb.org/t/p/original" + posterPath);
@@ -24,7 +24,7 @@ dto.setPosterPath("https://image.tmdb.org/t/p/w342" + posterPath);
 
 ## 2. Lazy loading + dimensions + alt text
 
-**search.ts** — grille de résultats :
+**search.ts** - grille de résultats :
 ```typescript
 // AVANT
 `<img src="${movie.posterPath}" alt="" class="w-full object-cover" style="aspect-ratio:2/3">`
@@ -37,7 +37,7 @@ dto.setPosterPath("https://image.tmdb.org/t/p/w342" + posterPath);
       class="w-full object-cover" style="aspect-ratio:2/3">`
 ```
 
-**movie.ts** — affiche de la fiche :
+**movie.ts** - affiche de la fiche :
 ```typescript
 // AVANT
 `<img src="${movie.posterPath}" alt="" class="rounded-lg" style="width:300px">`
@@ -50,7 +50,7 @@ dto.setPosterPath("https://image.tmdb.org/t/p/w342" + posterPath);
       class="rounded-lg" style="width:300px">`
 ```
 
-**history.ts** — vignettes de l'historique :
+**history.ts** - vignettes de l'historique :
 ```typescript
 // AVANT
 `<img src="${log.posterPath}" alt="" class="rounded object-cover shrink-0" style="width:60px;aspect-ratio:2/3">`
@@ -85,13 +85,13 @@ DevTools → Network → filtre Img → rechercher "Matrix"
 
 **Tailles d'images :**
 - Une image `original` TMDB fait 2000+ px de large, affichée dans une vignette de 185 px
-- Le navigateur télécharge 100% des pixels puis les réduit à 10% — 90% du transfert est gaspillé
+- Le navigateur télécharge 100% des pixels puis les réduit à 10% - 90% du transfert est gaspillé
 - Sur mobile en 4G, chaque MB compte : latence, batterie, forfait data
 
 **Lazy loading :**
 - Sans `loading="lazy"`, le navigateur télécharge toutes les images dès le chargement de la page
 - Seules ~5 images sont visibles à l'écran, les 15 autres sont hors écran
-- `loading="lazy"` est natif HTML — pas de JavaScript, pas de lib, pas de complexité
+- `loading="lazy"` est natif HTML - pas de JavaScript, pas de lib, pas de complexité
 
 **Dimensions explicites :**
 - Sans `width` et `height`, le navigateur ne peut pas réserver l'espace avant le chargement
@@ -99,17 +99,17 @@ DevTools → Network → filtre Img → rechercher "Matrix"
 - CLS élevé = mauvaise expérience utilisateur + travail CPU inutile pour recalculer le layout
 
 **Alt text :**
-- `alt=""` indique une image décorative — un lecteur d'écran l'ignore complètement
-- L'affiche d'un film est du contenu informatif — elle doit être décrite
+- `alt=""` indique une image décorative - un lecteur d'écran l'ignore complètement
+- L'affiche d'un film est du contenu informatif - elle doit être décrite
 - L'accessibilité fait partie intégrante du numérique responsable
 
 ## Bonnes pratiques
 
-- **Toujours servir l'image à la taille d'affichage** — pas plus grande
+- **Toujours servir l'image à la taille d'affichage** - pas plus grande
 - **`loading="lazy"` par défaut** sur toute image en dessous de la ligne de flottaison
 - **Toujours spécifier `width` et `height`** pour réserver l'espace
 - **`alt` descriptif** sur les images informatives, `alt=""` uniquement sur les décoratives
-- **Format WebP** quand possible — 25-35% plus léger que JPEG à qualité égale
+- **Format WebP** quand possible - 25-35% plus léger que JPEG à qualité égale
 
 ## Boîte à outils
 

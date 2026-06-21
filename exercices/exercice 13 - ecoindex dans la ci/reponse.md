@@ -1,4 +1,4 @@
-# Exercice 13 — Réponse
+# Exercice 13 - Réponse
 
 ## 1. Mesure avec GreenIT Analysis
 
@@ -96,8 +96,8 @@ jobs:
 | `retention-days`    | Durée de rétention de l'artifact (jours) | `30`                                     |
 
 **Outputs :**
-- `ecoindex` — le score EcoIndex le plus bas parmi toutes les URLs analysées
-- `report-path` — chemin absolu vers le rapport HTML généré
+- `ecoindex` - le score EcoIndex le plus bas parmi toutes les URLs analysées
+- `report-path` - chemin absolu vers le rapport HTML généré
 
 ## Stratégie de seuils progressifs
 
@@ -107,7 +107,7 @@ jobs:
 | Sprint 2   | 50 (note B)    | Fail le build       |
 | Objectif   | 75 (note A)    | Fail le build       |
 
-**Commencer permissif, resserrer progressivement** — imposer un seuil A dès le départ découragerait l'équipe.
+**Commencer permissif, resserrer progressivement** - imposer un seuil A dès le départ découragerait l'équipe.
 
 ## Ce que la mesure vérifie
 
@@ -132,11 +132,11 @@ L'action produit :
 
 ## Bonnes pratiques
 
-- **Traiter la sobriété comme un test** — si l'analyse échoue, la PR ne merge pas
-- **Séparer EcoIndex (frontend) et benchmark (backend)** — deux types de régression distincts
-- **Documenter les seuils** — expliquer pourquoi B et pas A, quand on passera à A
-- **Ne pas bloquer dès le jour 1** — commencer en mode `fail-on-threshold: 'false'`, passer à `'true'` quand l'équipe est à l'aise
-- **Historiser les rapports** — les artifacts permettent de suivre l'évolution dans le temps
+- **Traiter la sobriété comme un test** - si l'analyse échoue, la PR ne merge pas
+- **Séparer EcoIndex (frontend) et benchmark (backend)** - deux types de régression distincts
+- **Documenter les seuils** - expliquer pourquoi B et pas A, quand on passera à A
+- **Ne pas bloquer dès le jour 1** - commencer en mode `fail-on-threshold: 'false'`, passer à `'true'` quand l'équipe est à l'aise
+- **Historiser les rapports** - les artifacts permettent de suivre l'évolution dans le temps
 
 ## Boîte à outils
 

@@ -1,4 +1,4 @@
-# Exercice 10 — Réponse
+# Exercice 10 - Réponse
 
 ## 1. Diagnostic du N+1
 
@@ -16,7 +16,7 @@ for (Map<String, Object> result : results) {
 - 20 résultats = **1 + 20 = 21 appels HTTP** minimum (souvent 41 car `/credits` est un appel séparé)
 - Données récupérées mais jamais affichées dans la grille : `synopsis`, `runtime`, `genres`, `voteAverage`, `originalTitle`, `originalLanguage`, `popularity`
 
-## 2. Solution — Cache Spring
+## 2. Solution - Cache Spring
 
 ### pom.xml (ajouter les dépendances)
 
@@ -72,7 +72,7 @@ spring.cache.caffeine.spec=maximumSize=500,expireAfterWrite=3600s
 - `maximumSize=500` : au-delà de 500 entrées, les plus anciennes sont évincées
 - `expireAfterWrite=3600s` : chaque entrée expire 1h après son écriture
 
-## 3. Solution — Timeouts RestTemplate
+## 3. Solution - Timeouts RestTemplate
 
 ```java
 @Configuration
@@ -99,15 +99,15 @@ import java.time.Duration;
 
 | Métrique | Avant | Après (avec cache) | Gain |
 |----------|-------|---------------------|------|
-| Appels TMDB — 1ère recherche "Matrix" | 21-41 | 21-41 | 0 % (cache froid) |
-| Appels TMDB — 2ème recherche "Matrix" | 21-41 | **0** | **−100 %** |
-| Temps de réponse — 2ème recherche | ~2-5s | **< 10 ms** | **~99 %** |
+| Appels TMDB - 1ère recherche "Matrix" | 21-41 | 21-41 | 0 % (cache froid) |
+| Appels TMDB - 2ème recherche "Matrix" | 21-41 | **0** | **−100 %** |
+| Temps de réponse - 2ème recherche | ~2-5s | **< 10 ms** | **~99 %** |
 | 10 users × "Matrix" simultanément | 210-410 | **21-41** (1er) + **0** (suivants) | **−90 %+** |
 
 ## Ce que la mesure vérifie
 
 ```bash
-# Rechercher "Matrix" 2 fois — les logs ne doivent montrer aucun appel TMDB la 2ème fois
+# Rechercher "Matrix" 2 fois - les logs ne doivent montrer aucun appel TMDB la 2ème fois
 docker compose logs -f backend
 ```
 
@@ -132,7 +132,7 @@ Avec cache : 21 appels (1er user) + 0 × 99 = 21 appels
 
 ### Cache vs fix structural
 
-Le cache **amortit** le N+1, il ne le **supprime** pas. Le vrai fix serait de ne pas appeler `getMovieDetail()` dans la boucle de `searchMovies()` — les données de la recherche TMDB (`/search/movie`) contiennent déjà le titre, l'année et l'affiche. Seul le réalisateur nécessite un appel supplémentaire, et il pourrait être chargé à la demande sur la fiche détail.
+Le cache **amortit** le N+1, il ne le **supprime** pas. Le vrai fix serait de ne pas appeler `getMovieDetail()` dans la boucle de `searchMovies()` - les données de la recherche TMDB (`/search/movie`) contiennent déjà le titre, l'année et l'affiche. Seul le réalisateur nécessite un appel supplémentaire, et il pourrait être chargé à la demande sur la fiche détail.
 
 ### Timeouts
 
@@ -144,7 +144,7 @@ Sans timeout, un appel TMDB lent (réseau, rate limiting) bloque un thread Tomca
 - **TTL adapté au contexte** : 1h pour des données quasi-statiques (TMDB), 5 min pour des données vivantes
 - **`maximumSize`** pour éviter que le cache ne consomme toute la mémoire
 - **Toujours configurer `connectTimeout` et `readTimeout`** sur les clients HTTP
-- **Le cache est un amortisseur, pas une solution** — il masque le N+1, il ne le corrige pas
+- **Le cache est un amortisseur, pas une solution** - il masque le N+1, il ne le corrige pas
 
 ## Boîte à outils
 

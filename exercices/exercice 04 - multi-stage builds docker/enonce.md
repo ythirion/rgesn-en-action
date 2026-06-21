@@ -1,13 +1,13 @@
-# Exercice 4 : Architecture — Multi-stage builds Docker
+# Exercice 4 : Architecture - Multi-stage builds Docker
 
 ## Critères RGESN
 
-- **3.1** — Le service repose-t-il sur des composants conçus pour réduire leurs impacts environnementaux ?
-- **3.3** — Le service supporte-t-il l'évolution des protocoles (HTTP/2, compression) ?
+- **3.1** - Le service repose-t-il sur des composants conçus pour réduire leurs impacts environnementaux ?
+- **3.3** - Le service supporte-t-il l'évolution des protocoles (HTTP/2, compression) ?
 
 ## Contexte
 
-Letterflop pèse **~2.63 GB** en images Docker. C'est plus lourd qu'un système d'exploitation complet — pour une application qui cherche des films et logue des visionnages.
+Letterflop pèse **~2.63 GB** en images Docker. C'est plus lourd qu'un système d'exploitation complet - pour une application qui cherche des films et logue des visionnages.
 
 ![You wanted a banana but what you got was a gorilla holding the banana and the entire jungle](../../img/gorilla.webp)
 

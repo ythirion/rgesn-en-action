@@ -1,9 +1,9 @@
-# Exercice 1 : Mesurer avant d'agir — L'empreinte de Letterflop
+# Exercice 1 : Mesurer avant d'agir - L'empreinte de Letterflop
 
 ## Critères RGESN
 
-- **1.5** — Le service numérique a-t-il défini des objectifs de réduction de ses impacts environnementaux ?
-- **6.1** — Le service minimise-t-il le poids et le nombre de requêtes des pages ?
+- **1.5** - Le service numérique a-t-il défini des objectifs de réduction de ses impacts environnementaux ?
+- **6.1** - Le service minimise-t-il le poids et le nombre de requêtes des pages ?
 
 ## Contexte
 
@@ -51,7 +51,7 @@ npx ecoindex-cli analyse --url http://localhost:3000 http://localhost:3000/histo
 Copiez ce tableau dans votre éditeur et remplissez-le :
 
 ```markdown
-## Baseline Letterflop — Date : ___________
+## Baseline Letterflop - Date : ___________
 
 ### Images Docker
 | Service   | Image de base | Taille   |

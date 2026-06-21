@@ -2,16 +2,16 @@
 
 ## Critères RGESN
 
-- **2.6** — Le service numérique a-t-il fait l'objet d'une revue d'impact environnemental avant sa mise en production ?
-- **1.1** — Le service numérique a-t-il été évalué favorablement en termes d'utilité par rapport à ses impacts ?
+- **2.6** - Le service numérique a-t-il fait l'objet d'une revue d'impact environnemental avant sa mise en production ?
+- **1.1** - Le service numérique a-t-il été évalué favorablement en termes d'utilité par rapport à ses impacts ?
 
 ## Contexte
 
-Avant de toucher au code, apprenons à raisonner en impact. Combien coûte une heure de Netflix ? Un mail avec pièce jointe ? Une requête ChatGPT ? La plupart des développeur·se·s n'ont aucune intuition fiable sur ces ordres de grandeur — et c'est normal, personne ne nous les a jamais enseignés.
+Avant de toucher au code, apprenons à raisonner en impact. Combien coûte une heure de Netflix ? Un mail avec pièce jointe ? Une requête ChatGPT ? La plupart des développeur·se·s n'ont aucune intuition fiable sur ces ordres de grandeur - et c'est normal, personne ne nous les a jamais enseignés.
 
 ## Votre mission
 
-### Partie 1 — Le pari empreinte (~10 min)
+### Partie 1 - Le pari empreinte (~10 min)
 
 Classez chaque situation dans la bonne fourchette de CO2e. Pas de recherche, pas de calcul : votre intuition.
 
@@ -28,7 +28,7 @@ Fourchettes : `< 1g` | `1–10g` | `10–100g` | `> 100g`
 | F | 1 image générée par Midjourney / DALL-E 3               |            |
 ```
 
-### Partie 2 — Mini-ACV de Letterflop (~15 min)
+### Partie 2 - Mini-ACV de Letterflop (~15 min)
 
 Estimez l'empreinte annuelle de Letterflop pour un usage type :
 
@@ -51,7 +51,7 @@ Estimez l'empreinte annuelle de Letterflop pour un usage type :
 
 Utilisez les données de poids de page observées à l'exercice 1 et le ratio de Website Carbon Calculator : **~0.5g CO2e par MB transféré** (estimation moyenne).
 
-### Partie 3 — Comparer deux features (~10 min)
+### Partie 3 - Comparer deux features (~10 min)
 
 Le product owner propose d'ajouter une feature de **génération d'affiches personnalisées par IA** (type DALL-E). Comparez :
 
