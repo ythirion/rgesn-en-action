@@ -1,0 +1,18 @@
+"exercices/exercice 01 - mesurer avant d agir/enonce.md"
+  h_0a88d9aba8622a 10
+README.md
+  h_0a88d9aba8622a 10-11,21,24-27,29-30,36-39,63,65-67,73,77,87,89,110-112,117,130,179,184-187,200-203
+"exercices/exercice 01 - mesurer avant d agir/reponse.md"
+  h_0a88d9aba8622a 8,55,59-61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.9",
+  "base_commit_sha": "18ec3cd3f801bd37d7096fcae6b90c61baf91a4f",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
