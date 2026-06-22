@@ -7,7 +7,7 @@
 
 ## Contexte
 
-Vous venez de rejoindre l'équipe Letterflop. Avant de corriger quoi que ce soit, il faut comprendre où on en est.
+Vous venez de rejoindre l'équipe `Letterflop`. Avant de corriger quoi que ce soit, il faut comprendre où on en est.
 
 Un développeur qui optimise sans mesurer, c'est un médecin qui prescrit sans diagnostiquer. On ne sait pas ce qui pèse, on ne sait pas ce qui coûte, on ne sait pas par où commencer.
 

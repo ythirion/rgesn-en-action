@@ -4,12 +4,12 @@
 
 ### Images Docker (branche violations)
 
-| Service   | Image de base        | Taille   |
-|-----------|----------------------|----------|
-| frontend  | node:24.15.0         | ~904 MB  |
-| backend   | eclipse-temurin:25   | ~1.28 GB |
-| db        | postgres:15          | ~445 MB  |
-| **Total** |                      | **~2.63 GB** |
+| Service   | Image de base      | Taille       |
+|-----------|--------------------|--------------|
+| frontend  | node:24.15.0       | ~904 MB      |
+| backend   | eclipse-temurin:25 | ~1.28 GB     |
+| db        | postgres:15        | ~445 MB      |
+| **Total** |                    | **~2.63 GB** |
 
 ### Réseau - Recherche "Matrix"
 
@@ -51,11 +51,11 @@ Chacun de ces chiffres cache une ou plusieurs violations du RGESN que vous allez
 
 ## Boîte à outils
 
-| Outil | Usage |
-|-------|-------|
-| `docker images` | Taille des images de conteneurs |
-| DevTools → Network | Requêtes, transfert, domaines, waterfall |
-| Apache Bench (`ab`) | Débit et latence API sous charge |
-| EcoIndex CLI | Score global d'écoconception (A à G) |
-| Lighthouse | Performance, accessibilité, bonnes pratiques |
-| Website Carbon Calculator | Estimation kgCO2 par visite |
+| Outil                     | Usage                                        |
+|---------------------------|----------------------------------------------|
+| `docker images`           | Taille des images de conteneurs              |
+| DevTools → Network        | Requêtes, transfert, domaines, waterfall     |
+| Apache Bench (`ab`)       | Débit et latence API sous charge             |
+| EcoIndex CLI              | Score global d'écoconception (A à G)         |
+| Lighthouse                | Performance, accessibilité, bonnes pratiques |
+| Website Carbon Calculator | Estimation kgCO2 par visite                  |

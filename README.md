@@ -6,7 +6,9 @@ On parle beaucoup de numérique responsable, de fresque du numérique, de manife
 
 **Cet atelier n'est pas une énième prise de conscience. C'est une boîte à outils.**
 
-15 exercices pratiques que tu pourras appliquer immédiatement - sur ton produit, dans tes affinages, dans ton code. Le but : que tu repartes capable de te questionner et d'utiliser ces outils **dès demain**.
+15 exercices pratiques que tu pourras appliquer immédiatement - sur ton produit, dans tes affinages, dans ton code. 
+
+> Le but : que tu repartes capable de te questionner et d'utiliser ces outils **dès demain**.
 
 ![L'impact du numérique](img/impact-du-numerique.webp)
 
@@ -16,20 +18,25 @@ On parle beaucoup de numérique responsable, de fresque du numérique, de manife
 
 ![Letterflop](img/letter-flop.webp)
 
-**Letterflop** est un journal de visionnage de films. L'application permet de rechercher des films (via l'API TMDB), consulter leurs fiches, enregistrer des visionnages avec une note, et parcourir son historique.
+**Letterflop** est un journal de visionnage de films. L'application permet de rechercher des films (via l'API `TMDB`), consulter leurs fiches, enregistrer des visionnages avec une note, et parcourir son historique.
 
-**Stack technique :** PostgreSQL 15 + Spring Boot 3.5 / Java 25 + TypeScript / Tailwind / Vite + Docker Compose.
+**Stack technique :** 
+- PostgreSQL 15
+- Spring Boot 3.5 / Java 25
+- TypeScript / Tailwind / Vite
+- Docker Compose
 
-**La particularité** : la codebase contient volontairement **27 mauvaises pratiques** documentées couvrant l'ensemble des familles du RGESN. Chaque exercice vous guide pour les identifier, les mesurer et les corriger.
+**La particularité** : la codebase contient volontairement des **mauvaises pratiques** documentées couvrant l'ensemble des familles du RGESN. 
+Chaque exercice vous guide pour les identifier, les mesurer et les corriger.
 
 ---
 
 ## Prérequis
 
-- Docker et Docker Compose
-- Un éditeur de code (VS Code, IntelliJ...)
-- Node.js 20+
-- Un navigateur avec les DevTools
+- `Docker` et `Docker Compose`
+- Un `IDE` (VS Code, IntelliJ...)
+- `Node.js` 20+
+- Un navigateur avec les `DevTools`
 - Une clé API TMDB (gratuite sur [themoviedb.org](https://www.themoviedb.org))
 
 ## Installation
@@ -52,20 +59,22 @@ L'application est accessible sur `http://localhost:3000`.
 
 Installez ces extensions **avant** de commencer l'atelier - vous les utiliserez tout au long des exercices :
 
-| Extension | Description | Lien |
-|-----------|-------------|------|
-| **GreenIT Analysis** | Analyse l'empreinte environnementale d'une page (EcoIndex, nombre de requêtes, poids, DOM) | [Chrome Web Store](https://chromewebstore.google.com/detail/greenit-analysis/mofbfhffeklkbebfclfaiifefjflcpad) |
-| **GreenTrackR** | Suivi continu de l'empreinte carbone de votre navigation | [Chrome Web Store](https://chromewebstore.google.com/detail/greentrackr/felcpalgepcmkphplglfpmgbidfmanea) |
-| **Lighthouse** | Audit performance, accessibilité, bonnes pratiques (intégré à Chrome DevTools) | Intégré |
-| **WAVE** | Évaluation de l'accessibilité web | [Chrome Web Store](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) |
+| Extension            | Description                                                                                | Lien                                                                                                               |
+|----------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| **GreenIT Analysis** | Analyse l'empreinte environnementale d'une page (EcoIndex, nombre de requêtes, poids, DOM) | [Chrome Web Store](https://chromewebstore.google.com/detail/greenit-analysis/mofbfhffeklkbebfclfaiifefjflcpad)     |
+| **GreenTrackR**      | Suivi continu de l'empreinte carbone de votre navigation                                   | [Chrome Web Store](https://chromewebstore.google.com/detail/greentrackr/felcpalgepcmkphplglfpmgbidfmanea)          |
+| **Lighthouse**       | Audit performance, accessibilité, bonnes pratiques (intégré à Chrome DevTools)             | Intégré                                                                                                            |
+| **WAVE**             | Évaluation de l'accessibilité web                                                          | [Chrome Web Store](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) |
 
 ---
 
 ## Le RGESN
 
-![RGESN - Référentiel Général d'Écoconception](img/rgesn-arcep.webp)
+[![RGESN - Référentiel Général d'Écoconception](img/rgesn-arcep.webp)](https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/)
 
-Le **Référentiel Général d'Écoconception des Services Numériques** (RGESN) est publié par l'ARCEP, l'Arcom, l'ADEME et la DINUM. Il comprend **79 critères** répartis en **8 familles** :
+Le **Référentiel Général d'Écoconception des Services Numériques** (RGESN) est publié par l'ARCEP, l'Arcom, l'ADEME et la DINUM. 
+
+Il comprend **79 critères** répartis en **9 familles** :
 
 1. Stratégie
 2. Spécifications
@@ -75,8 +84,9 @@ Le **Référentiel Général d'Écoconception des Services Numériques** (RGESN)
 6. Frontend
 7. Backend
 8. Hébergement
+9. Algorithmie
 
-Cet atelier couvre les 8 familles à travers des exercices concrets sur Letterflop.
+Cet atelier couvre les 9 familles à travers des exercices concrets sur Letterflop.
 
 ---
 
@@ -96,15 +106,15 @@ Cet atelier couvre les 8 familles à travers des exercices concrets sur Letterfl
 
 ### Phase 1 - Comprendre et mesurer
 
-| # | Exercice | Durée | Thème |
-|---|----------|-------|-------|
-| 01 | [Mesurer avant d'agir](exercices/exercice%2001%20-%20mesurer%20avant%20d%20agir/enonce.md) | 20 min | Baseline complète de Letterflop (Docker, réseau, API, EcoIndex) |
-| 02 | [Le pari empreinte et l'ACV express](exercices/exercice%2002%20-%20pari%20empreinte%20et%20acv%20express/enonce.md) | 25 min | Estimer l'impact CO2e, mini-ACV, comparer des features |
+| #  | Exercice                                                                                                            | Durée  | Thème                                                           |
+|----|---------------------------------------------------------------------------------------------------------------------|--------|-----------------------------------------------------------------|
+| 01 | [Mesurer avant d'agir](exercices/exercice%2001%20-%20mesurer%20avant%20d%20agir/enonce.md)                          | 20 min | Baseline complète de Letterflop (Docker, réseau, API, EcoIndex) |
+| 02 | [Le pari empreinte et l'ACV express](exercices/exercice%2002%20-%20pari%20empreinte%20et%20acv%20express/enonce.md) | 25 min | Estimer l'impact CO2e, mini-ACV, comparer des features          |
 
 ### Phase 2 - Challenger le besoin
 
-| # | Exercice | Durée | Thème |
-|---|----------|-------|-------|
+| #  | Exercice                                                                                 | Durée  | Thème                                                        |
+|----|------------------------------------------------------------------------------------------|--------|--------------------------------------------------------------|
 | 03 | [Challenger le besoin](exercices/exercice%2003%20-%20challenger%20le%20besoin/enonce.md) | 20 min | Grille de décision RGESN, arbitrage produit, audit stratégie |
 
 ### Phase 3 - Infrastructure
@@ -116,11 +126,11 @@ Cet atelier couvre les 8 familles à travers des exercices concrets sur Letterfl
 
 ### Phase 4 - Frontend
 
-| # | Exercice | Durée | Thème |
-|---|----------|-------|-------|
+| #  | Exercice                                                                                                           | Durée  | Thème                                                       |
+|----|--------------------------------------------------------------------------------------------------------------------|--------|-------------------------------------------------------------|
 | 06 | [Polices système et composants natifs](exercices/exercice%2006%20-%20polices%20et%20composants%20natifs/enonce.md) | 35 min | Supprimer Google Fonts, radio buttons natifs, focus visible |
-| 07 | [Images adaptées et lazy loading](exercices/exercice%2007%20-%20images%20adaptees%20et%20lazy%20loading/enonce.md) | 30 min | Tailles TMDB, loading="lazy", alt text (4.5 MB → 274 KB) |
-| 08 | [Pagination serveur](exercices/exercice%2008%20-%20pagination%20serveur/enonce.md) | 25 min | Remplacer la pagination client (1000 logs → 6) |
+| 07 | [Images adaptées et lazy loading](exercices/exercice%2007%20-%20images%20adaptees%20et%20lazy%20loading/enonce.md) | 30 min | Tailles TMDB, loading="lazy", alt text (4.5 MB → 274 KB)    |
+| 08 | [Pagination serveur](exercices/exercice%2008%20-%20pagination%20serveur/enonce.md)                                 | 25 min | Remplacer la pagination client (1000 logs → 6)              |
 
 ### Phase 5 - Backend
 
@@ -165,16 +175,16 @@ Cet atelier couvre les 8 familles à travers des exercices concrets sur Letterfl
 
 Chaque exercice utilise des outils de mesure concrets - pas de "faites-moi confiance", du chiffre :
 
-| Outil | Usage |
-|-------|-------|
-| `docker images` | Taille des images de conteneurs |
-| DevTools Network | Requêtes, transfert, domaines externes |
-| GreenIT Analysis (extension) | Score EcoIndex, complexité DOM, poids |
-| `./scripts/benchmark.sh` | Débit API sous charge (Apache Bench) |
-| `EXPLAIN ANALYZE` | Plans d'exécution SQL |
-| Logs serveur | Appels API TMDB |
-| [greenit-analysis-action](https://github.com/ythirion/greenit-analysis-action) | Quality gate EcoIndex dans la CI |
-| [ecoindex_badge](https://github.com/cnumr/ecoindex_badge) | Badge de transparence sur le site |
+| Outil                                                                          | Usage                                  |
+|--------------------------------------------------------------------------------|----------------------------------------|
+| `docker images`                                                                | Taille des images de conteneurs        |
+| DevTools Network                                                               | Requêtes, transfert, domaines externes |
+| GreenIT Analysis (extension)                                                   | Score EcoIndex, complexité DOM, poids  |
+| `./scripts/benchmark.sh`                                                       | Débit API sous charge (Apache Bench)   |
+| `EXPLAIN ANALYZE`                                                              | Plans d'exécution SQL                  |
+| Logs serveur                                                                   | Appels API TMDB                        |
+| [greenit-analysis-action](https://github.com/ythirion/greenit-analysis-action) | Quality gate EcoIndex dans la CI       |
+| [ecoindex_badge](https://github.com/cnumr/ecoindex_badge)                      | Badge de transparence sur le site      |
 
 ---
 
@@ -187,3 +197,7 @@ Chaque exercice utilise des outils de mesure concrets - pas de "faites-moi confi
 - [Electricity Maps - intensité carbone en temps réel](https://www.electricitymaps.com)
 - [Green Web Foundation](https://www.thegreenwebfoundation.org)
 - [Cloud Carbon Footprint](https://www.cloudcarbonfootprint.org)
+
+
+## TODO
+- Mesurer : ajouter eco-index results + screen shots
