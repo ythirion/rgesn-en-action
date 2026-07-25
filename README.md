@@ -188,6 +188,30 @@ Chaque exercice utilise des outils de mesure concrets - pas de "faites-moi confi
 
 ---
 
+## Green Craft - Le manifeste
+
+Cet atelier s'inscrit dans la continuité de [**Green Craft**](https://green-craft.fr), l'alliance du Software Craftsmanship et du Numérique Responsable : des artisan·e·s du logiciel qui placent l'excellence technique au service de la sobriété, de l'accessibilité et de l'impact positif sur la société.
+
+> ### Manifeste pour l'artisanat logiciel responsable
+>
+> En tant qu'aspirant·e·s Artisan·e·s du Logiciel, nous relevons le niveau du développement professionnel de logiciels par la pratique et en aidant les autres à acquérir le savoir-faire. Grâce à ce travail, nous avons appris à apprécier :
+>
+> Des logiciels bien conçus
+> ET aussi **sobres et durables**.
+>
+> Pas seulement ajouter constamment de la valeur,
+> mais aussi **de la valeur respectueuse des ressources**.
+>
+> Plus qu'une communauté de professionnels,
+> une communauté dédiée à **un numérique soutenable**.
+>
+> Des partenariats productifs permettant de co-construire
+> des solutions **conscientes de leur impact environnemental et sociétal**.
+
+→ Retrouvez le manifeste complet et les 4 valeurs détaillées sur [green-craft.fr](https://green-craft.fr).
+
+---
+
 ## Ressources
 
 - [RGESN officiel (ARCEP/Arcom/ADEME/DINUM)](https://ecoresponsable.numerique.gouv.fr/publications/referentiel-general-ecoconception/)
