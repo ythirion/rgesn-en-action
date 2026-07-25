@@ -1,0 +1,16 @@
+"exercices/exercice 03 - challenger le besoin/enonce.md"
+  h_0a88d9aba8622a 19,38-39,42,44,47,51
+"exercices/exercice 03 - challenger le besoin/reponse.md"
+  h_0a88d9aba8622a 6,12,27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "41dbb8301ffe214e86c87ed49516bf134c2557fa",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
