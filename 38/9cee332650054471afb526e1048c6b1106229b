@@ -1,0 +1,19 @@
+README.md
+  s_da2087c3e80065::t_b3147c6d60f35d 191-214
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "389cee332650054471afb526e1048c6b1106229b",
+  "prompts": {},
+  "sessions": {
+    "s_da2087c3e80065": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2c8bf283-aab5-4b98-8281-1ed7b77cb04e",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
