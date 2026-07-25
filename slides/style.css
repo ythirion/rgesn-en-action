@@ -32,6 +32,16 @@
   letter-spacing: -0.01em;
 }
 
+/* Tableaux plus denses - évite les débordements sur les slides à données */
+.slidev-layout table {
+  font-size: 0.8em;
+}
+
+.slidev-layout td,
+.slidev-layout th {
+  padding: 0.4em 0.6em;
+}
+
 .slidev-layout h1 {
   color: var(--wt-indigo);
 }
@@ -153,4 +163,61 @@
   font-family: 'JetBrains Mono', ui-monospace, monospace;
   font-weight: 800;
   color: var(--wt-indigo);
+}
+
+/* Numéro d'exercice, au-dessus du titre d'une slide de contenu */
+.exercise-label {
+  display: block;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 700;
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--wt-navy);
+  margin-bottom: 0.3em;
+}
+
+/* Tag critère RGESN (ex. "6.5") */
+.criteria-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 700;
+  font-size: 0.75em;
+  color: var(--wt-indigo);
+  border: 1.5px solid var(--wt-indigo);
+  border-radius: 999px;
+  padding: 0.15em 0.7em;
+  margin: 0 0.3em 0.3em 0;
+}
+
+/* Étiquette AVANT / APRÈS au-dessus d'un bloc de code */
+.diff-label {
+  display: inline-block;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 700;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.15em 0.7em;
+  border-radius: 0.25rem;
+  margin-bottom: 0.4em;
+}
+
+.diff-label.before {
+  color: var(--wt-accent);
+  background: color-mix(in srgb, var(--wt-accent) 12%, transparent);
+}
+
+.diff-label.after {
+  color: #1a7a4a;
+  background: color-mix(in srgb, #1a7a4a 12%, transparent);
+}
+
+/* Callout "pourquoi c'est important", fond clair */
+.callout-why {
+  background: color-mix(in srgb, var(--wt-navy) 8%, white);
+  border-left: 4px solid var(--wt-navy);
+  border-radius: 0.25rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.8em;
 }
