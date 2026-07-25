@@ -10,7 +10,24 @@ On parle beaucoup de numérique responsable, de fresque du numérique, de manife
 
 > Le but : que tu repartes capable de te questionner et d'utiliser ces outils **dès demain**.
 
+---
+
+## L'impact du numérique en quelques chiffres
+
+Quelques repères pour poser le contexte avant de commencer :
+
 ![L'impact du numérique](img/impact-du-numerique.webp)
+
+- **6** équipements numériques actifs par personne en moyenne
+- Si le numérique était un pays, il émettrait autant de gaz à effet de serre que **5,5 fois la France**
+- L'intelligence artificielle représente déjà **plus de 4 %** des émissions de GES du numérique
+- Le numérique représente **40 %** du budget GES annuel soutenable d'un·e internaute pour rester sous les 1,5 °C de réchauffement climatique
+
+Et parmi les indicateurs environnementaux, ce n'est pas le carbone le plus critique : l'**utilisation des ressources, minéraux et métaux** arrive en tête, devant le réchauffement climatique et l'épuisement des ressources fossiles.
+
+> Ces chiffres ne se règlent pas en signant une charte. Ils se règlent dans le code, l'architecture et les choix produit - ce que cet atelier te donne les moyens de faire.
+
+**Source :** [GreenIT.fr - Le numérique, c'est 40 % du budget climat soutenable (2025)](https://www.greenit.fr/2025/02/04/le-numerique-cest-40-du-budget-climat-soutenable/)
 
 ---
 
