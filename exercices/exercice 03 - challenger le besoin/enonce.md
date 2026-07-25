@@ -16,7 +16,7 @@ Le backlog de Letterflop contient 3 user stories. Le product owner les veut tout
 
 ### Partie 1 - Arbitrage produit avec la grille RGESN (~15 min)
 
-Trois user stories sont en backlog :
+Trois user stories sont dans le backlog :
 
 **US-A : Affiches personnalisées par IA**
 > En tant qu'utilisateur, je veux générer une affiche personnalisée pour chaque film loggé, créée par IA à partir du synopsis et de ma note.
@@ -28,28 +28,27 @@ Trois user stories sont en backlog :
 > En tant qu'utilisateur, je veux enregistrer un visionnage avec une note, une date et un commentaire.
 
 Remplissez la grille de décision pour chaque US :
-
 ```markdown
-| Critère RGESN | Question                                         | US-A | US-B | US-C |
-|---------------|--------------------------------------------------|------|------|------|
-| 2.3           | Fonctionne sur connexion lente / offline ?        |      |      |      |
-| 2.6           | Impact évalué avant construction ?                 |      |      |      |
-| 2.7           | Peut être décommissionnée proprement ?            |      |      |      |
-| 2.9           | Les composants UI ont un impact maîtrisé ?        |      |      |      |
-| 2.10          | L'impact des services tiers est évalué ?          |      |      |      |
-| **Décision**  | Construire / Reworker / Abandonner ?              |      |      |      |
+| Critère RGESN | Question                                   | US-A | US-B | US-C |
+|---------------|--------------------------------------------|------|------|------|
+| 2.3           | Fonctionne sur connexion lente / offline ? |      |      |      |
+| 2.6           | Impact évalué avant construction ?         |      |      |      |
+| 2.7           | Peut être décommissionnée proprement ?     |      |      |      |
+| 2.9           | Les composants UI ont un impact maîtrisé ? |      |      |      |
+| 2.10          | L'impact des services tiers est évalué ?   |      |      |      |
+| **Décision**  | Construire / retravailler / Abandonner ?   |      |      |      |
 ```
 
-### Partie 2 - Reworker US-B (~5 min)
+### Partie 2 - Retravailler US-B (~5 min)
 
-US-B n'est pas à abandonner, mais à reworker. Réécrivez-la pour qu'elle respecte le RGESN :
+US-B n'est pas à abandonner, mais à retravailler. Réécrivez-la pour qu'elle respecte le RGESN :
 
 ```markdown
-## US-B reworkée
+## US-B retravaillée
 > En tant qu'utilisateur, je veux...
 ```
 
-Contraintes de la version reworkée :
+Contraintes de la version retravaillée :
 - Pas d'autoplay
 - Image au lieu de vidéo par défaut
 - Chargement à la demande uniquement

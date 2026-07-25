@@ -2,14 +2,14 @@
 
 ## Partie 1 - Grille de décision
 
-| Critère RGESN | Question                                   | US-A        | US-B       | US-C       |
-|---------------|--------------------------------------------|-------------|------------|------------|
-| 2.3           | Fonctionne sur connexion lente / offline ? | Non (IA cloud) | Non (vidéo HD) | Oui       |
-| 2.6           | Impact évalué avant construction ?         | Non         | Non        | Oui (léger)|
-| 2.7           | Peut être décommissionnée proprement ?     | Difficile (images générées stockées) | Oui | Oui |
-| 2.9           | Les composants UI ont un impact maîtrisé ? | Non (GPU)   | Non (player vidéo) | Oui (formulaire HTML) |
+fix: | Critère RGESN | Question                                   | US-A        | US-B                 | US-C       |
+|---------------|--------------------------------------------|-------------|----------------------|------------|
+| 2.3           | Fonctionne sur connexion lente / offline ? | Non (IA cloud) | Non (vidéo HD)       | Oui       |
+| 2.6           | Impact évalué avant construction ?         | Non         | Non                  | Oui (léger)|
+| 2.7           | Peut être décommissionnée proprement ?     | Difficile (images générées stockées) | Oui                  | Oui |
+| 2.9           | Les composants UI ont un impact maîtrisé ? | Non (GPU)   | Non (player vidéo)   | Oui (formulaire HTML) |
 | 2.10          | L'impact des services tiers est évalué ?   | Non (API IA coûteuse) | Moyen (YouTube/TMDB) | Aucun service tiers |
-| **Décision**  |                                            | **Abandonner** | **Reworker** | **Construire** |
+| **Décision**  |                                            | **Abandonner** | **Retravailler**     | **Construire** |
 
 ### Le retournement chiffré
 
@@ -24,7 +24,7 @@ Avec 100 utilisateurs actifs et un taux de réutilisation de 3 générations par
 
 À l'échelle de 1 million d'utilisateurs quotidiens, US-A représenterait ~5 840 tonnes de CO2e par an. US-C : ~3.65 tonnes.
 
-## Partie 2 - US-B reworkée
+## Partie 2 - US-B retravaillée
 
 > En tant qu'utilisateur, je veux pouvoir **consulter la bande-annonce d'un film en cliquant sur un bouton "Voir la bande-annonce"**, affichée en qualité standard par défaut, avec la possibilité de passer en HD.
 
