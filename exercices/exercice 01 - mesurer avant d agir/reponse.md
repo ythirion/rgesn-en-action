@@ -2,7 +2,7 @@
 
 ## Valeurs attendues
 
-### Images Docker (branche violations)
+### Images Docker (branche main)
 
 | Service   | Image de base      | Taille       |
 |-----------|--------------------|--------------|
@@ -12,6 +12,8 @@
 | **Total** |                    | **~2.63 GB** |
 
 ### Réseau - Recherche "Matrix"
+
+![DevTools Network - recherche Matrix : 21 requêtes, 4.5 MB transférés](../../img/network-matrix.webp)
 
 - **~20+ requêtes** dont les images TMDB en taille `original` (~500 KB chacune)
 - **~4-5 MB transférés** pour une grille de vignettes de 200 px

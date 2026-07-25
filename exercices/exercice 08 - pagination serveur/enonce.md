@@ -9,7 +9,7 @@
 
 La page Historique demande **1000 logs** au serveur pour en afficher **6**. À chaque changement de page (Précédent / Suivant), elle redemande les 1000 logs, les filtre côté client, et jette les 994 inutiles.
 
-![DevTools Network - page historique avant correction : 3.6 MB, Google Fonts, 1000 logs](../../img/history-avant.webp)
+![DevTools Network - page historique avant correction : 3.6 MB, Google Fonts, posters TMDB en résolution originale](../../img/history-avant.webp)
 
 Le backend supporte déjà la pagination via Spring Data (`Pageable`) - le frontend ne l'utilise simplement pas.
 
@@ -26,7 +26,7 @@ Ouvrez `frontend/src/pages/history.ts` et identifiez :
 
 Modifiez `history.ts` pour utiliser la pagination serveur :
 
-**AVANT** (ce que vous devriez trouver dans la branche violations) :
+**AVANT** (ce que vous devriez trouver dans le code de la branche main) :
 ```typescript
 // Charge TOUT à chaque changement de page
 async function loadPage(page: number): Promise<void> {

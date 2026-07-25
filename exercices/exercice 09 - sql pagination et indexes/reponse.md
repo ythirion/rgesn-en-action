@@ -2,7 +2,7 @@
 
 ## 1. Diagnostic de getAllLogs()
 
-Dans la branche violations, `getAllLogs()` contient :
+Dans le code initial (branche main), `getAllLogs()` contient :
 
 ```java
 // AVANT - 3 full table scans pour une seule requête HTTP

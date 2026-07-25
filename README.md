@@ -20,6 +20,8 @@ On parle beaucoup de numérique responsable, de fresque du numérique, de manife
 
 **Letterflop** est un journal de visionnage de films. L'application permet de rechercher des films (via l'API `TMDB`), consulter leurs fiches, enregistrer des visionnages avec une note, et parcourir son historique.
 
+Code source : [github.com/ythirion/letter-flop](https://github.com/ythirion/letter-flop)
+
 **Stack technique :** 
 - PostgreSQL 15
 - Spring Boot 3.5 / Java 25
@@ -28,6 +30,10 @@ On parle beaucoup de numérique responsable, de fresque du numérique, de manife
 
 **La particularité** : la codebase contient volontairement des **mauvaises pratiques** documentées couvrant l'ensemble des familles du RGESN. 
 Chaque exercice vous guide pour les identifier, les mesurer et les corriger.
+
+**Deux branches :**
+- `main` - le code de départ, avec les mauvaises pratiques à identifier et corriger pendant l'atelier
+- `rgesn` - le corrigé de référence, pour comparer votre solution ou débloquer un exercice
 
 ---
 
@@ -52,6 +58,8 @@ docker compose up --build
 ```
 
 L'application est accessible sur `http://localhost:3000`.
+
+> Besoin de comparer avec le corrigé ? `git checkout rgesn` (dans une copie séparée du repo, pour ne pas écraser votre travail).
 
 ---
 
