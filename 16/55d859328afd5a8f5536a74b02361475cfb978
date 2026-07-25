@@ -1,0 +1,26 @@
+README.md
+  s_da2087c3e80065::t_0a6fdeee8da553 15-17,21-31
+  h_0a88d9aba8622a 18
+  s_da2087c3e80065::t_05c345bfdd5f16 13-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "1655d859328afd5a8f5536a74b02361475cfb978",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_da2087c3e80065": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2c8bf283-aab5-4b98-8281-1ed7b77cb04e",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
