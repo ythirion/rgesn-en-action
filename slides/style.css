@@ -1,0 +1,156 @@
+/*
+ * Thème "RGESN en action"
+ * Palette échantillonnée depuis public/rgesn-en-action.webp :
+ *   indigo  #352F95  (fond de la bannière)
+ *   navy    #3B5A8B  (liseré du bateau)
+ *   gold    #E8C468  (filet doré du bateau)
+ *   accent  #D9121A  (bouée)
+ * Police : titres en monospace (JetBrains Mono) pour coller à la bannière,
+ * corps de texte en sans-serif (Inter) pour la lisibilité.
+ */
+
+:root {
+  --slidev-theme-primary: #352f95;
+
+  --wt-indigo: #352f95;
+  --wt-indigo-dark: #211a5e;
+  --wt-navy: #3b5a8b;
+  --wt-gold: #e8c468;
+  --wt-gold-dark: #c9a23e;
+  --wt-accent: #d9121a;
+}
+
+.slidev-layout {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  font-family: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.slidev-layout h1 {
+  color: var(--wt-indigo);
+}
+
+.slidev-layout a {
+  color: var(--wt-indigo);
+  text-decoration-color: var(--wt-gold);
+}
+
+.slidev-layout strong {
+  color: var(--wt-indigo-dark);
+}
+
+/* Slides "cover" et "section" reprennent le fond indigo de la bannière */
+.slidev-layout.cover,
+.slidev-layout.section {
+  background: var(--wt-indigo);
+  color: white;
+}
+
+.slidev-layout.cover h1,
+.slidev-layout.section h1,
+.slidev-layout.cover h2,
+.slidev-layout.section h2 {
+  color: white;
+}
+
+.slidev-layout.cover strong,
+.slidev-layout.section strong {
+  color: var(--wt-gold);
+}
+
+.slidev-layout.cover a,
+.slidev-layout.section a {
+  color: var(--wt-gold);
+}
+
+/* Illustration de la bannière sur le slide de couverture */
+.cover-illustration {
+  max-width: 380px;
+  margin: 2rem auto 0;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
+}
+
+/* Liseré doré, clin d'oeil au filet du bateau sur la bannière */
+.slidev-layout.cover h1::after,
+.slidev-layout.section h1::after {
+  content: '';
+  display: block;
+  width: 4em;
+  height: 4px;
+  margin-top: 0.4em;
+  background: var(--wt-gold);
+  border-radius: 2px;
+}
+
+/* Encart indigo réutilisable (callouts sur fond plein, hors cover/section) */
+.callout-indigo {
+  background: var(--wt-indigo);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.callout-indigo strong {
+  color: white;
+}
+
+.callout-indigo a {
+  color: var(--wt-gold);
+}
+
+/* Badge de phase, réutilisable dans les slides d'agenda/transition */
+.phase-badge {
+  display: inline-block;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 700;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+  background: var(--wt-navy);
+  border-radius: 999px;
+  padding: 0.25em 0.9em;
+}
+
+/* Variante dorée du badge (ex. branche "rgesn") */
+.phase-badge-gold {
+  background: var(--wt-gold-dark);
+}
+
+/* Bordures de couleur, pour les cartes (ex. comparaison de branches) */
+.border-navy {
+  border-color: var(--wt-navy);
+}
+
+.border-gold {
+  border-color: var(--wt-gold);
+}
+
+/* Cellules pleines, pour les grilles (ex. les 9 familles du RGESN) */
+.cell-indigo {
+  background: var(--wt-indigo);
+  color: white;
+}
+
+.cell-navy {
+  background: var(--wt-navy);
+  color: white;
+}
+
+/* Callout "chiffre clé" */
+.stat {
+  border-left: 4px solid var(--wt-gold);
+  padding-left: 0.8em;
+}
+
+.stat .stat-value {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 800;
+  color: var(--wt-indigo);
+}

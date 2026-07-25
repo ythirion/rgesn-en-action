@@ -1,2 +1,6 @@
 .idea/
 .DS_Store
+
+# slides
+dist
+node_modules
