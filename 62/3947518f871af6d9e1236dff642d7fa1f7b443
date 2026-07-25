@@ -1,0 +1,28 @@
+"exercices/exercice 01 - mesurer avant d agir/reponse.md"
+  s_da2087c3e80065::t_b9e5f3218b8231 5
+  s_da2087c3e80065::t_714519ae469f81 16-17
+"exercices/exercice 09 - sql pagination et indexes/reponse.md"
+  s_da2087c3e80065::t_206c7b8ed3ef3a 5
+README.md
+  s_da2087c3e80065::t_8fec6530a5bb3e 23-24,34-37,62
+  s_da2087c3e80065::t_59b4b17281d689 63
+"exercices/exercice 08 - pagination serveur/enonce.md"
+  s_da2087c3e80065::t_0bcd4c1123bfc9 12
+  s_da2087c3e80065::t_e39fa6936d7111 29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "623947518f871af6d9e1236dff642d7fa1f7b443",
+  "prompts": {},
+  "sessions": {
+    "s_da2087c3e80065": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2c8bf283-aab5-4b98-8281-1ed7b77cb04e",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
