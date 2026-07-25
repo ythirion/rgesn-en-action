@@ -101,3 +101,7 @@ Consultez le repo [cnumr/ecoindex_badge](https://github.com/cnumr/ecoindex_badge
 - L'attribut `data-theme="dark"` adapte le badge au fond sombre
 - Le script doit être chargé avec `defer` pour ne pas bloquer le rendu
 - Si le site n'est pas encore en ligne, le badge affichera un état "non mesuré" - c'est normal en développement local
+
+---
+
+→ [Proposition de solution](reponse.md)

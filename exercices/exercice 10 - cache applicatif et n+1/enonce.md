@@ -97,3 +97,7 @@ docker compose logs -f backend | grep -c "themoviedb"
 - Caffeine est le cache in-memory le plus performant pour la JVM
 - TTL de 1h (3600s) : les données TMDB changent rarement (corrections de crédits, mise à jour de synopsis)
 - Le cache ne résout pas le N+1 **structurellement** - il l'amortit. Le vrai fix serait de ne pas appeler `getMovieDetail()` depuis `searchMovies()`
+
+---
+
+→ [Proposition de solution](reponse.md)

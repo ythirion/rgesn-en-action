@@ -89,3 +89,7 @@ Le plan d'exécution doit afficher `Index Scan` au lieu de `Seq Scan`. Le benchm
 - `Page<MovieLog>` contient `.getContent()`, `.getTotalElements()`, `.getTotalPages()`
 - `.map(this::toDto)` transforme un `Page<MovieLog>` en `Page<MovieLogDto>` sans liste intermédiaire
 - Les indexes B-tree offrent O(log n) vs O(n) pour un full table scan
+
+---
+
+→ [Proposition de solution](reponse.md)

@@ -65,3 +65,7 @@ Après correction, recherchez "Matrix" et observez dans DevTools Network (filtre
 - Dans `TmdbService.java`, cherchez `"https://image.tmdb.org/t/p/"` - c'est là que la taille est spécifiée
 - Tailles TMDB disponibles : `w92`, `w154`, `w185`, `w342`, `w500`, `w780`, `original`
 - `loading="lazy"` est un attribut HTML standard - pas de JavaScript requis
+
+---
+
+→ [Proposition de solution](reponse.md)

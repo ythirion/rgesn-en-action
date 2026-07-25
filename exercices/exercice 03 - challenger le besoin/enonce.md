@@ -80,3 +80,7 @@ Il n'y a pas de code dans cet exercice. Ouvrez votre éditeur, copiez les tablea
 ## Indice
 
 Le retournement : la feature la plus impressionnante (US-A) est souvent celle qu'il faut abandonner. La feature la plus banale (US-C) est souvent la plus sobre. **Le meilleur code vert est celui qu'on n'écrit pas.**
+
+---
+
+→ [Proposition de solution](reponse.md)

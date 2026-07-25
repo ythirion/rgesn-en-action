@@ -70,3 +70,7 @@ Ouvrez un fichier vide dans votre éditeur. Copiez les tableaux. Remplissez-les 
 ## Indice
 
 La règle contre-intuitive : **60 à 80% de l'impact d'un service numérique vient des terminaux** (fabrication + énergie de consultation côté client), pas des serveurs. Ça change complètement la lecture des décisions techniques.
+
+---
+
+→ [Proposition de solution](reponse.md)

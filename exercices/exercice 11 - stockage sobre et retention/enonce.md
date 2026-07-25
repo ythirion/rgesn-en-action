@@ -88,3 +88,7 @@ docker exec -i letter-flop-db-1 psql -U postgres -d letterflop -c \
 - `regexp_replace()` de PostgreSQL peut extraire le chemin : `regexp_replace(poster_path, 'https://image\.tmdb\.org/t/p/[^/]+', '')`
 - En Java, `String.replaceAll("https://image\\.tmdb\\.org/t/p/[^/]+", "")` fait la même chose
 - La constante `TMDB_IMAGE_BASE` peut centraliser le préfixe d'URL
+
+---
+
+→ [Proposition de solution](reponse.md)

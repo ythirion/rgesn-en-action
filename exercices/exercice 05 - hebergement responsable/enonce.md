@@ -71,3 +71,7 @@ Pas de code dans cet exercice. Utilisez les sources ci-dessous et remplissez les
 - [Electricity Maps](https://www.electricitymaps.com) - intensité carbone en temps réel par pays
 - [Green Web Foundation](https://www.thegreenwebfoundation.org) - vérifier si un domaine est hébergé "vert"
 - [Uptime Institute](https://uptimeinstitute.com) - benchmark mondial des datacenters
+
+---
+
+→ [Proposition de solution](reponse.md)

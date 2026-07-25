@@ -92,3 +92,7 @@ Copiez ce tableau dans votre éditeur et remplissez-le :
 ## Indice
 
 Ne cherchez pas encore à corriger quoi que ce soit. L'objectif est uniquement de **constater** et de **noter**. Ce tableau vous servira de référence pour l'exercice final.
+
+---
+
+→ [Proposition de solution](reponse.md)

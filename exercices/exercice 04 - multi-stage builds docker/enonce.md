@@ -108,3 +108,7 @@ curl http://localhost:3000  # doit retourner le HTML de la page de recherche
 - Le jar compilé se trouve dans `/app/target/letterflop-0.0.1-SNAPSHOT.jar`
 - `mvn dependency:go-offline` pré-télécharge les dépendances (optimise le cache Docker)
 - nginx sert depuis `/usr/share/nginx/html`
+
+---
+
+→ [Proposition de solution](reponse.md)

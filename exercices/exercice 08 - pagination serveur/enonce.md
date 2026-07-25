@@ -84,3 +84,7 @@ Après correction, dans DevTools Network (filtre XHR) :
 - L'API `getLogs(page, size)` dans `api.ts` passe déjà les paramètres au serveur
 - Le serveur retourne un objet avec `content`, `totalElements`, `totalPages`, `currentPage`
 - Il n'y a qu'un seul fichier à modifier : `frontend/src/pages/history.ts`
+
+---
+
+→ [Proposition de solution](reponse.md)

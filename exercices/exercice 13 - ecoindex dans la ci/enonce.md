@@ -130,3 +130,7 @@ Ajoutez une étape au workflow qui exécute un benchmark Apache Bench et échoue
 - Le rapport HTML généré est uploadé automatiquement comme artifact GitHub Actions (paramètre `upload-report`)
 - Les outputs `ecoindex` et `report-path` peuvent être utilisés dans des étapes suivantes
 - Commencez avec un seuil permissif (`min-ecoindex: '50'` = note B) et resserrez progressivement
+
+---
+
+→ [Proposition de solution](reponse.md)

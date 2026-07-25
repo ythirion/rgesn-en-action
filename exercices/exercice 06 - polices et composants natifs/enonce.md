@@ -77,3 +77,7 @@ Après correction :
 - Fichiers HTML : `frontend/index.html`, `frontend/movie.html`, `frontend/history.html`
 - Widget étoiles : `frontend/src/pages/movie.ts`, cherchez la partie qui gère le rating
 - `system-ui` fait que chaque OS affiche sa police native : San Francisco (macOS), Segoe UI (Windows), Roboto (Android)
+
+---
+
+→ [Proposition de solution](reponse.md)

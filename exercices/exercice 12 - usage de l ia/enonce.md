@@ -94,3 +94,7 @@ Pas de code dans cet exercice. Ouvrez un fichier vide, copiez les tableaux, disc
 - TMDB a déjà un endpoint `/movie/{id}/similar` qui retourne des films similaires basés sur les genres et les métadonnées
 - L'utilisateur donne déjà une note numérique de 1 à 5 étoiles à chaque film
 - Les logs en base contiennent toutes les données structurées nécessaires pour un bilan annuel (titre, note, date, genre)
+
+---
+
+→ [Proposition de solution](reponse.md)
