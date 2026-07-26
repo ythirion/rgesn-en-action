@@ -1,0 +1,16 @@
+"exercices/exercice 03 - challenger le besoin/reponse.md"
+  h_0a88d9aba8622a 6,11-12,19
+"exercices/exercice 05 - hebergement responsable/enonce.md"
+  h_0a88d9aba8622a 37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "567676111c95871a0a15a696dc06585be88d9ece",
+  "prompts": {},
+  "humans": {
+    "h_0a88d9aba8622a": {
+      "author": "Yoan Thirion <yoan.thirion@gmail.com>"
+    }
+  }
+}
