@@ -33,16 +33,16 @@ WUE = Litres d'eau consommés / kWh d'énergie IT
 Choisissez 3 hébergeurs parmi : OVHcloud, Scaleway, Infomaniak, Hetzner, Google Cloud, AWS. Recherchez les informations sur leurs pages "Sustainability" / "Environnement" et remplissez :
 
 ```markdown
-| Critère              | Hébergeur 1 : ___ | Hébergeur 2 : ___ | Hébergeur 3 : ___ |
-|----------------------|-------------------|--------------------|--------------------|
-| PUE déclaré          |                   |                    |                    |
-| WUE documenté ?      |                   |                    |                    |
-| % énergie renouvelable |                 |                    |                    |
-| Direct ou RECs ?     |                   |                    |                    |
-| Datacenter le + proche |                 |                    |                    |
-| Chaleur récupérée ?  |                   |                    |                    |
-| Offre stockage froid ? |                 |                    |                    |
-| Rapport durabilité ?  |                  |                    |                    |
+| Critère                | Hébergeur 1 : ___ | Hébergeur 2 : ___ | Hébergeur 3 : ___ |
+|------------------------|-------------------|-------------------|-------------------|
+| PUE déclaré            |                   |                   |                   |
+| WUE documenté ?        |                   |                   |                   |
+| % énergie renouvelable |                   |                   |                   |
+| Direct ou RECs ?       |                   |                   |                   |
+| Datacenter le + proche |                   |                   |                   |
+| Chaleur récupérée ?    |                   |                   |                   |
+| Offre stockage froid ? |                   |                   |                   |
+| Rapport durabilité ?   |                   |                   |                   |
 ```
 
 ### 3. Concevoir l'architecture hot/cold pour movie_logs (~10 min)

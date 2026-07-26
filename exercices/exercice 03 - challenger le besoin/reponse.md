@@ -2,23 +2,23 @@
 
 ## Partie 1 - Grille de décision
 
-fix: | Critère RGESN | Question                                   | US-A        | US-B                 | US-C       |
-|---------------|--------------------------------------------|-------------|----------------------|------------|
-| 2.3           | Fonctionne sur connexion lente / offline ? | Non (IA cloud) | Non (vidéo HD)       | Oui       |
-| 2.6           | Impact évalué avant construction ?         | Non         | Non                  | Oui (léger)|
-| 2.7           | Peut être décommissionnée proprement ?     | Difficile (images générées stockées) | Oui                  | Oui |
-| 2.9           | Les composants UI ont un impact maîtrisé ? | Non (GPU)   | Non (player vidéo)   | Oui (formulaire HTML) |
-| 2.10          | L'impact des services tiers est évalué ?   | Non (API IA coûteuse) | Moyen (YouTube/TMDB) | Aucun service tiers |
-| **Décision**  |                                            | **Abandonner** | **Retravailler**     | **Construire** |
+| Critère RGESN | Question                                   | US-A                                 | US-B                 | US-C                  |
+|---------------|--------------------------------------------|--------------------------------------|----------------------|-----------------------|
+| 2.3           | Fonctionne sur connexion lente / offline ? | Non (IA cloud)                       | Non (vidéo HD)       | Oui                   |
+| 2.6           | Impact évalué avant construction ?         | Non                                  | Non                  | Oui (léger)           |
+| 2.7           | Peut être décommissionnée proprement ?     | Difficile (images générées stockées) | Oui                  | Oui                   |
+| 2.9           | Les composants UI ont un impact maîtrisé ? | Non (GPU)                            | Non (player vidéo)   | Oui (formulaire HTML) |
+| 2.10          | L'impact des services tiers est évalué ?   | Non (API IA coûteuse)                | Moyen (YouTube/TMDB) | Aucun service tiers   |
+| **Décision**  |                                            | **Abandonner**                       | **Retravailler**     | **Construire**        |
 
 ### Le retournement chiffré
 
 Avec 100 utilisateurs actifs et un taux de réutilisation de 3 générations par utilisateur/jour :
 
-| Feature | CO2e / utilisation | Utilisations/jour | CO2e/an |
-|---------|--------------------|--------------------|---------|
-| US-A    | ~5g (génération IA) | 300              | ~547 kg |
-| US-C    | ~0.01g (POST HTTP) | 200               | ~0.73 kg |
+| Feature | CO2e / utilisation  | Utilisations/jour | CO2e/an  |
+|---------|---------------------|-------------------|----------|
+| US-A    | ~5g (génération IA) | 300               | ~547 kg  |
+| US-C    | ~0.01g (POST HTTP)  | 200               | ~0.73 kg |
 
 **US-A = ~750× l'impact de US-C pour un même volume d'utilisateurs.**
 
