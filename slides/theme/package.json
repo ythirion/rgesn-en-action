@@ -1,0 +1,9 @@
+{
+  "name": "slidev-theme-signal",
+  "version": "0.1.0",
+  "private": true,
+  "keywords": ["slidev-theme"],
+  "slidev": {
+    "colorSchema": "both"
+  }
+}

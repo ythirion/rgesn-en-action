@@ -15,22 +15,17 @@ Puis ouvrir <http://localhost:3030>.
 
 ## Thème
 
-Le thème étend `@slidev/theme-default` avec une palette et une police extraites de
-[`img/rgesn-en-action.webp`](../img/rgesn-en-action.webp) (la bannière de l'atelier) :
+Le deck utilise le thème **Signal** ([`theme/`](./theme)), le même que les slides de la
+*Journée de l'écoconception numérique 2027* (Green Craft) :
 
-| Rôle              | Couleur                          |
-|-------------------|-----------------------------------|
-| Indigo (primaire) | `#352F95`                        |
-| Navy (secondaire) | `#3B5A8B`                        |
-| Or (accent)       | `#E8C468`                        |
-| Rouge (accent)    | `#D9121A`                        |
-
-- Titres en **JetBrains Mono** (police monospace, clin d'oeil au titre de la bannière)
-- Corps de texte en **Inter** (lisibilité)
+- Palette noir / blanc, un seul accent surligné `#D9F24F`
+- Titres et texte en **Lexend**, code et libellés en **Atkinson Hyperlegible Mono** (auto-hébergées via Fontsource)
+- Layouts `cover`, `section` (numéro de phase), `statement` (slides sombres) et `default`
+- Barre de progression en pied de slide, avec la partie courante (frontmatter `part:`)
 
 Fichiers :
-- [`style.css`](./style.css) - variables de couleurs, polices, styles des layouts `cover`/`section`, classes utilitaires (`.stat`, `.phase-badge`)
-- [`uno.config.ts`](./uno.config.ts) - couleurs UnoCSS additionnelles (`navy`, `gold`, `accent`)
+- [`theme/`](./theme) - copie du thème Signal (layouts, `global-top.vue`, styles et composants)
+- [`style.css`](./style.css) - compléments propres à l'atelier : tableaux Markdown, `.why`, `.diff-label`, `.shot`, `.families`, `.phases`
 - [`public/`](./public) - images de la bannière et de Letterflop, servies à la racine du deck
 
 ## Contenu actuel

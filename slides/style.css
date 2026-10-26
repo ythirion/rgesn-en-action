@@ -1,223 +1,142 @@
 /*
- * Thème "RGESN en action"
- * Palette échantillonnée depuis public/rgesn-en-action.webp :
- *   indigo  #352F95  (fond de la bannière)
- *   navy    #3B5A8B  (liseré du bateau)
- *   gold    #E8C468  (filet doré du bateau)
- *   accent  #D9121A  (bouée)
- * Police : titres en monospace (JetBrains Mono) pour coller à la bannière,
- * corps de texte en sans-serif (Inter) pour la lisibilité.
+ * Compléments propres à l'atelier, construits sur le thème Signal (./theme).
+ * Aucune couleur hors variables (--bg, --fg, --muted, --hl, --onhl, --line).
  */
 
-:root {
-  --slidev-theme-primary: #352f95;
-
-  --wt-indigo: #352f95;
-  --wt-indigo-dark: #211a5e;
-  --wt-navy: #3b5a8b;
-  --wt-gold: #e8c468;
-  --wt-gold-dark: #c9a23e;
-  --wt-accent: #d9121a;
-}
-
-.slidev-layout {
-  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
-}
-
-.slidev-layout h1,
-.slidev-layout h2,
-.slidev-layout h3 {
-  font-family: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-/* Tableaux plus denses - évite les débordements sur les slides à données */
+/* Tableaux Markdown : même rendu que .grid-table */
 .slidev-layout table {
-  font-size: 0.8em;
+  width: 100%;
+  border-collapse: collapse;
+  border: 4px solid var(--line);
+  font-size: 18px;
+  line-height: 1.3;
 }
 
-.slidev-layout td,
+.slidev-layout th,
+.slidev-layout td {
+  border: 2px solid var(--line);
+  padding: 6px 12px;
+}
+
 .slidev-layout th {
-  padding: 0.4em 0.6em;
-}
-
-.slidev-layout h1 {
-  color: var(--wt-indigo);
-}
-
-.slidev-layout a {
-  color: var(--wt-indigo);
-  text-decoration-color: var(--wt-gold);
-}
-
-.slidev-layout strong {
-  color: var(--wt-indigo-dark);
-}
-
-/* Slides "cover" et "section" reprennent le fond indigo de la bannière */
-.slidev-layout.cover,
-.slidev-layout.section {
-  background: var(--wt-indigo);
-  color: white;
-}
-
-.slidev-layout.cover h1,
-.slidev-layout.section h1,
-.slidev-layout.cover h2,
-.slidev-layout.section h2 {
-  color: white;
-}
-
-.slidev-layout.cover strong,
-.slidev-layout.section strong {
-  color: var(--wt-gold);
-}
-
-.slidev-layout.cover a,
-.slidev-layout.section a {
-  color: var(--wt-gold);
-}
-
-/* Illustration de la bannière sur le slide de couverture */
-.cover-illustration {
-  max-width: 380px;
-  margin: 2rem auto 0;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
-}
-
-/* Liseré doré, clin d'oeil au filet du bateau sur la bannière */
-.slidev-layout.cover h1::after,
-.slidev-layout.section h1::after {
-  content: '';
-  display: block;
-  width: 4em;
-  height: 4px;
-  margin-top: 0.4em;
-  background: var(--wt-gold);
-  border-radius: 2px;
-}
-
-/* Encart indigo réutilisable (callouts sur fond plein, hors cover/section) */
-.callout-indigo {
-  background: var(--wt-indigo);
-  color: white;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-}
-
-.callout-indigo strong {
-  color: white;
-}
-
-.callout-indigo a {
-  color: var(--wt-gold);
-}
-
-/* Badge de phase, réutilisable dans les slides d'agenda/transition */
-.phase-badge {
-  display: inline-block;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
   font-weight: 700;
-  font-size: 0.75em;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: white;
-  background: var(--wt-navy);
-  border-radius: 999px;
-  padding: 0.25em 0.9em;
 }
 
-/* Variante dorée du badge (ex. branche "rgesn") */
-.phase-badge-gold {
-  background: var(--wt-gold-dark);
+/* Critères RGESN couverts par un exercice */
+.slidev-layout .chips {
+  margin-bottom: 8px;
 }
 
-/* Bordures de couleur, pour les cartes (ex. comparaison de branches) */
-.border-navy {
-  border-color: var(--wt-navy);
+/* Paragraphes et listes Markdown */
+:where(.slidev-layout) p {
+  margin: 0 0 0.6em;
 }
 
-.border-gold {
-  border-color: var(--wt-gold);
+:where(.slidev-layout) ul {
+  list-style: square;
+  padding-left: 1.1em;
+  margin: 0.4em 0;
 }
 
-/* Cellules pleines, pour les grilles (ex. les 9 familles du RGESN) */
-.cell-indigo {
-  background: var(--wt-indigo);
-  color: white;
+:where(.slidev-layout) li {
+  margin: 4px 0;
 }
 
-.cell-navy {
-  background: var(--wt-navy);
-  color: white;
+/* Explication / point clé : liseré surligné */
+.why {
+  padding: 10px 16px;
+  border-left: 8px solid var(--hl);
+  font-size: 19px;
+  line-height: 1.4;
 }
 
-/* Callout "chiffre clé" */
-.stat {
-  border-left: 4px solid var(--wt-gold);
-  padding-left: 0.8em;
+.why p {
+  max-width: none;
+  margin: 0;
 }
 
-.stat .stat-value {
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-weight: 800;
-  color: var(--wt-indigo);
-}
-
-/* Numéro d'exercice, au-dessus du titre d'une slide de contenu */
-.exercise-label {
-  display: block;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-weight: 700;
-  font-size: 0.7em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--wt-navy);
-  margin-bottom: 0.3em;
-}
-
-/* Tag critère RGESN (ex. "6.5") */
-.criteria-tag {
-  display: inline-block;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-weight: 700;
-  font-size: 0.75em;
-  color: var(--wt-indigo);
-  border: 1.5px solid var(--wt-indigo);
-  border-radius: 999px;
-  padding: 0.15em 0.7em;
-  margin: 0 0.3em 0.3em 0;
-}
-
-/* Étiquette AVANT / APRÈS au-dessus d'un bloc de code */
+/* Étiquette au-dessus d'un bloc de code ou d'une citation */
 .diff-label {
   display: inline-block;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  margin-bottom: 6px;
+  padding: 2px 10px;
+  border: 2px solid var(--line);
+  font-family: var(--mono);
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.75em;
-  letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 0.15em 0.7em;
-  border-radius: 0.25rem;
-  margin-bottom: 0.4em;
-}
-
-.diff-label.before {
-  color: var(--wt-accent);
-  background: color-mix(in srgb, var(--wt-accent) 12%, transparent);
 }
 
 .diff-label.after {
-  color: #1a7a4a;
-  background: color-mix(in srgb, #1a7a4a 12%, transparent);
+  background: var(--hl);
+  color: var(--onhl);
 }
 
-/* Callout "pourquoi c'est important", fond clair */
-.callout-why {
-  background: color-mix(in srgb, var(--wt-navy) 8%, white);
-  border-left: 4px solid var(--wt-navy);
-  border-radius: 0.25rem;
-  padding: 1rem 1.5rem;
-  font-size: 0.8em;
+/* Captures d'écran */
+.shot {
+  display: block;
+  border: 4px solid var(--line);
+}
+
+/* Blocs de code un peu plus compacts sur les slides denses */
+.slidev-layout pre {
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+/* Les 9 familles du RGESN */
+.families {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 4px solid var(--line);
+}
+
+.families span {
+  padding: 16px 20px;
+  font-size: 22px;
+  font-weight: 700;
+  border-right: 4px solid var(--line);
+  border-bottom: 4px solid var(--line);
+}
+
+.families span:nth-child(3n) {
+  border-right: 0;
+}
+
+.families span:nth-last-child(-n + 3) {
+  border-bottom: 0;
+}
+
+.families span.is-hl {
+  background: var(--hl);
+  color: var(--onhl);
+}
+
+.families small {
+  font-family: var(--mono);
+  font-size: 16px;
+  color: inherit;
+  margin-right: 8px;
+}
+
+/* Programme : une ligne par phase */
+.phases {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 40px;
+}
+
+.phases div {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--line);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.phases strong {
+  font-family: var(--mono);
+  font-size: 16px;
 }

@@ -1,0 +1,1860 @@
+/*
+ * Composants du deck Green Craft, redessinés avec les variables Signal.
+ * Canevas 1280 × 720. Aucune couleur hors variables (--bg, --fg, --muted, --hl, --onhl, --line).
+ */
+.slidev-layout {
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  font-family: var(--font);
+  color: var(--fg);
+  letter-spacing: 0;
+}
+
+.slidev-layout h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+.slidev-layout strong {
+  font-weight: 700;
+}
+
+.slidev-layout code {
+  font-family: var(--mono);
+}
+
+/* Ancien libellé [ kicker ] : rendu comme l'eyebrow Signal */
+.kicker {
+  display: block;
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+
+.mark {
+  background: var(--hl);
+  color: var(--onhl);
+  padding: 0 0.25em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Source en pied de slide, au-dessus de la barre de progression */
+.slidev-layout .source {
+  position: absolute;
+  left: 64px;
+  right: 64px;
+  bottom: 60px;
+  max-width: none;
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Phrase de chute */
+.slidev-layout p.lead {
+  font-size: 26px;
+  line-height: 1.35;
+  max-width: none;
+}
+
+/* Blocs : la carte Signal */
+.box {
+  border: 4px solid var(--line);
+  padding: 18px 20px;
+  background: var(--bg);
+}
+
+.box p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.box--accent {
+  background: var(--hl);
+  color: var(--onhl);
+}
+
+.box--accent h3,
+.box--accent .figure {
+  color: var(--onhl);
+}
+
+/* Gros chiffres */
+.figure {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.figure__unit {
+  font-size: 0.5em;
+  margin-left: 0.15em;
+}
+
+/* Étiquettes */
+.tags,
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags {
+  margin-top: 36px;
+}
+
+.chips {
+  margin-top: 12px;
+}
+
+.tags span,
+.chips span {
+  border: 1.5px solid var(--line);
+  padding: 4px 10px;
+  font-family: var(--mono);
+  font-size: 16px;
+}
+
+.tags span {
+  border-width: 3px;
+  padding: 8px 16px;
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.chips--dense {
+  gap: 6px;
+}
+
+.chips--dense span {
+  font-size: 15px;
+  padding: 2px 8px;
+}
+
+/* Qui suis-je ? */
+.whoami {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  align-items: center;
+  gap: 48px;
+  height: 100%;
+}
+
+.whoami li {
+  margin: 8px 0;
+}
+
+.whoami__photo {
+  border: 4px solid var(--line);
+}
+
+.whoami__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Répartition en barres : séries distinguées par motif, pas par couleur */
+.bars {
+  display: grid;
+  gap: 18px;
+}
+
+.bar {
+  display: grid;
+  grid-template-columns: 230px 1fr 110px;
+  align-items: center;
+  gap: 20px;
+}
+
+.bar__track {
+  height: 40px;
+  border: 4px solid var(--line);
+}
+
+.bar__fill {
+  height: 100%;
+  background: var(--fg);
+}
+
+.bar__fill--stripes {
+  background: repeating-linear-gradient(135deg, var(--fg) 0 4px, transparent 4px 12px);
+}
+
+.bar__fill--dots {
+  background: radial-gradient(var(--fg) 2px, transparent 2.5px) 0 0 / 8px 8px;
+}
+
+.bar__value {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Échelle EcoIndex : seule la note mesurée ressort */
+.grades {
+  display: flex;
+  border: 4px solid var(--line);
+  width: fit-content;
+}
+
+.grades span {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  font-size: 30px;
+  font-weight: 700;
+  border-right: 4px solid var(--line);
+}
+
+.grades span:last-child {
+  border-right: 0;
+}
+
+.grades span.is-active {
+  width: 110px;
+  font-size: 48px;
+  background: var(--hl);
+  color: var(--onhl);
+}
+
+/* Valeurs d'un manifeste */
+.values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 4px solid var(--line);
+}
+
+.value {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  padding: 20px 22px;
+}
+
+.value:nth-child(odd) {
+  border-right: 4px solid var(--line);
+}
+
+.value:nth-child(-n + 2) {
+  border-bottom: 4px solid var(--line);
+}
+
+.value__num {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.value p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.value p.value__then {
+  display: inline;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.45;
+  background: var(--hl);
+  color: var(--onhl);
+  padding: 0 0.25em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Event Storming : la vision du PO en pointillés, les événements fantômes surlignés */
+.storm {
+  display: grid;
+  gap: 10px;
+}
+
+.storm__label {
+  font-family: var(--mono);
+  font-size: 15px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.storm__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.sticky {
+  display: flex;
+  align-items: flex-end;
+  min-height: 120px;
+  padding: 14px 16px;
+  border: 4px dashed var(--line);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.sticky--ghost {
+  border-style: solid;
+  background: var(--hl);
+  color: var(--onhl);
+}
+
+/* Grille de décision */
+.grid-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 4px solid var(--line);
+  font-size: 19px;
+}
+
+.grid-table th,
+.grid-table td {
+  border: 2px solid var(--line);
+  padding: 7px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.grid-table th {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.grid-table th small {
+  font-weight: 400;
+}
+
+.grid-table td:first-child {
+  font-family: var(--mono);
+}
+
+.grid-table tfoot td {
+  border-top: 4px solid var(--line);
+  font-weight: 700;
+}
+
+.grid-table tfoot td.is-active {
+  background: var(--hl);
+  color: var(--onhl);
+}
+
+/* Étude de cas : texte à gauche, vidéo à droite */
+.case {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.case p {
+  margin: 0;
+}
+
+.case__flow {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.case__flow li {
+  counter-increment: step;
+  margin: 4px 0;
+}
+
+.case__flow li::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: var(--mono);
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+.case__video {
+  margin: 0;
+  border: 4px solid var(--line);
+}
+
+.case__video video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Layouts centrés et « statement » */
+.slidev-layout.gc-center {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.gc-center__inner {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.gc-center__inner p {
+  max-width: none;
+}
+
+.slidev-layout.gc-statement {
+  display: grid;
+  align-items: center;
+  padding: 60px 96px 84px;
+}
+
+.gc-statement h1 {
+  font-size: 64px;
+  line-height: 1.12;
+  max-width: 28ch;
+}
+
+.gc-statement p {
+  font-size: 32px;
+  max-width: none;
+}
+
+/*
+ * Alternance clair / sombre : le deck est clair, les slides d'annonce
+ * (couverture, statement, ouverture de partie) passent en sombre.
+ */
+.gc-dark {
+  --bg: #0A0A0A;
+  --fg: #FFFFFF;
+  --muted: #D6D6D6;
+  --line: #FFFFFF;
+  --accent: #FFFFFF;
+}
+
+.slidev-layout.gc-dark {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* Couverture : le logo en grand, sans cadre, à gauche du titre */
+.slidev-layout.gc-cover {
+  grid-template-columns: 460px 1fr;
+  gap: 56px;
+}
+
+.gc-cover .media {
+  width: 460px;
+  height: auto;
+  border: 0;
+  object-fit: contain;
+  align-self: center;
+}
+
+.gc-cover .cover-license {
+  display: inline-block;
+  margin-top: 28px;
+}
+
+.gc-cover .cover-license img {
+  display: block;
+  width: 132px;
+  height: auto;
+}
+
+/* Citation (légende du colibri) */
+.slidev-layout blockquote.quote {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.quote p {
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 0;
+  max-width: none;
+}
+
+.quote p.quote__by {
+  font-family: var(--mono);
+  font-size: 15px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* Mesure d'une page : la vidéo à gauche, les chiffres à droite */
+.measure {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.measure__figures {
+  display: grid;
+  gap: 10px;
+}
+
+.measure__figures .grades {
+  margin-bottom: 10px;
+}
+
+.measure__figures .grades span {
+  width: 46px;
+  height: 56px;
+  font-size: 22px;
+}
+
+.measure__figures .grades span.is-active {
+  width: 72px;
+  font-size: 36px;
+}
+
+.measure__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 6px;
+}
+
+.measure__row strong {
+  font-size: 34px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Image d'inspiration en hauteur, sur la droite de la slide */
+.slidev-layout a.inspiration {
+  position: absolute;
+  top: 48px;
+  right: 64px;
+  bottom: 100px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.inspiration img {
+  display: block;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border: 4px solid var(--line);
+}
+
+.inspiration span {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Contenu laissant la place à l'image d'inspiration */
+.with-inspiration {
+  margin-right: 270px;
+}
+
+/*
+ * Event Storming : les couleurs de post-its de la notation d'Alberto Brandolini.
+ * Seule exception à la palette Signal, pour rester fidèle à l'atelier.
+ * Texte toujours noir : contraste ≥ 7:1 sur chaque teinte.
+ */
+.slidev-layout {
+  --es-event: #FFA94D;
+  --es-command: #74C0FC;
+  --es-actor: #FFE066;
+  --es-policy: #D0BFFF;
+  --es-readmodel: #8CE99A;
+  --es-external: #FFA8D5;
+  --es-hotspot: #FF6B6B;
+  --es-nr: var(--hl);
+}
+
+.es {
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 2px solid #0A0A0A;
+  color: #0A0A0A;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.es strong {
+  display: block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.es--event { background: var(--es-event); }
+.es--command { background: var(--es-command); }
+.es--actor { background: var(--es-actor); }
+.es--policy { background: var(--es-policy); }
+.es--readmodel { background: var(--es-readmodel); }
+.es--external { background: var(--es-external); }
+.es--hotspot { background: var(--es-hotspot); transform: rotate(-3deg); }
+.es--nr { background: var(--es-nr); border-width: 4px; }
+
+/* Petits post-its (acteur, système externe) */
+.es--sm {
+  font-size: 13px;
+  padding: 6px 8px;
+}
+
+/* Page « c'est quoi ? » : explications à gauche, légende à droite */
+.es-intro {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+  align-items: start;
+}
+
+.es-intro__legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.es-intro__legend .es {
+  padding: 5px 8px;
+  font-size: 13px;
+}
+
+.es-intro__legend .es strong {
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+
+.es-intro__def {
+  font-size: 26px;
+  line-height: 1.35;
+  margin: 0 0 16px;
+}
+
+.es-intro ul {
+  margin: 0 0 8px;
+  padding-left: 1.1em;
+}
+
+.es-intro li {
+  margin: 6px 0;
+}
+
+/* Big Picture : une colonne par événement, de gauche à droite */
+.es-board {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 14px;
+  border-top: 4px solid var(--line);
+}
+
+.es-col {
+  display: grid;
+  grid-template-rows: 44px 80px auto;
+  gap: 10px;
+  align-content: start;
+}
+
+.es-col .es--event {
+  font-size: 17px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.es-legend {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.es-legend__swatch {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  background: var(--es-nr);
+  border: 4px solid #0A0A0A;
+}
+
+.es-legend p {
+  margin: 0;
+  font-size: 19px;
+  max-width: none;
+}
+
+/* Exemple de critère RGESN, avec le verdict surligné */
+.rgesn-example {
+  border-left: 6px solid var(--fg);
+  padding-left: 18px;
+}
+
+.rgesn-example__id {
+  display: block;
+  font-family: var(--mono);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.rgesn-example p {
+  font-size: 20px;
+  line-height: 1.4;
+  max-width: none;
+  margin: 0 0 8px;
+}
+
+.rgesn-example__verdict {
+  font-weight: 700;
+}
+
+/* Photo d'atelier sous l'explication */
+.es-intro__photo {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 4px solid var(--line);
+}
+
+/* Le hotspot, seul sur sa ligne, prend toute la largeur */
+.es-intro__legend .es--hotspot {
+  grid-column: span 2;
+  transform: rotate(-1.5deg);
+}
+
+/* Plusieurs post-its sous un même événement */
+.es-stack {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+/* Légende des couleurs du Big Picture, en haut à droite */
+.es-key {
+  position: absolute;
+  top: 54px;
+  right: 64px;
+  display: flex;
+  gap: 16px;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.es-key span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.es-key i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #0A0A0A;
+}
+
+.es-key i.es--hotspot {
+  background: var(--es-hotspot);
+  transform: none;
+}
+
+/* US-A : affiche, user story et étapes, matrice valeur / impact */
+.usa {
+  display: grid;
+  grid-template-columns: 230px 1fr 300px;
+  gap: 32px;
+  align-items: start;
+}
+
+.usa__poster {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 4px solid var(--line);
+}
+
+.usa__steps {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.usa__step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.usa__num {
+  font-family: var(--mono);
+  font-weight: 700;
+}
+
+.usa__value {
+  grid-column: 2;
+  justify-self: start;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.matrix {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+}
+
+.matrix__y {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--mono);
+  font-size: 14px;
+  text-align: center;
+}
+
+.matrix__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 130px 130px;
+  border: 4px solid var(--line);
+}
+
+.matrix__grid > div {
+  position: relative;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid var(--line);
+}
+
+/* Case retenue : surlignée au moment de la décision */
+.matrix__fill {
+  position: absolute;
+  inset: 0;
+  background: var(--hl);
+}
+
+.matrix__label {
+  position: relative;
+}
+
+.matrix__dot {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 6px 10px;
+  background: #0A0A0A;
+  color: #FFFFFF;
+  font-family: var(--mono);
+  font-size: 14px;
+}
+
+.matrix__x {
+  grid-column: 2;
+  font-family: var(--mono);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Checklist finale : une case par valeur du manifeste */
+.checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 4px solid var(--line);
+}
+
+.checklist__value {
+  padding: 12px 20px;
+}
+
+.checklist__value:nth-child(odd) {
+  border-right: 4px solid var(--line);
+}
+
+.checklist__value:nth-child(-n + 2) {
+  border-bottom: 4px solid var(--line);
+}
+
+.checklist__value h3 {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.checklist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.checklist li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 4px 0;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+/* Case à cocher dessinée, vide : c'est à chacun de la cocher */
+.checklist li::before {
+  content: '';
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--line);
+}
+
+/* Partenariat productif : trois principes, la formule en anglais au-dessus */
+.partner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.partner__en {
+  display: block;
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Ouverture de partie : la valeur du manifeste est longue, titre plus petit */
+.gc-section h1 {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+/* Mini ACV : hypothèses d'usage en fourchette basse / haute */
+.usa__acv {
+  width: 100%;
+  margin-top: 8px;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.usa__acv th,
+.usa__acv td {
+  border: 2px solid var(--line);
+  padding: 4px 10px;
+  text-align: right;
+}
+
+.usa__acv th:first-child,
+.usa__acv td:first-child {
+  text-align: left;
+}
+
+.usa__acv th {
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.usa__acv tfoot td {
+  border-top: 4px solid var(--line);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Étape 1 de l'Event Storming : événements en vrac, puis rangés sur la timeline */
+.tl {
+  position: relative;
+  height: 330px;
+  margin-top: 16px;
+  border: 4px solid var(--line);
+}
+
+.tl__time {
+  position: absolute;
+  left: 50%;
+  top: 14px;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.tl .tl__ev {
+  position: absolute;
+  left: calc(var(--x) + 20px);
+  top: calc(var(--y) + 30px);
+  width: 120px;
+  min-height: 72px;
+  transform: rotate(var(--r));
+  transition: left 0.8s ease, top 0.8s ease, transform 0.8s ease, opacity 0.8s ease;
+}
+
+.tl.is-ordered .tl__ev {
+  left: calc(var(--tx) + 20px);
+  top: var(--ty);
+  transform: none;
+}
+
+.tl.is-ordered .tl__ev--dup {
+  opacity: 0;
+}
+
+.tl__q {
+  position: absolute;
+  padding: 2px 8px;
+  background: var(--hl);
+  color: var(--onhl);
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  transition: opacity 0.5s ease;
+}
+
+.tl.is-ordered .tl__q {
+  opacity: 0;
+}
+
+/* Valeur 02 : caractéristiques d'architecture */
+.archi {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 28px;
+}
+
+.archi__rules {
+  list-style: decimal;
+  margin: 8px 0 0;
+  padding-left: 22px;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.archi__note {
+  margin-top: 14px;
+}
+
+.archi__cats {
+  display: grid;
+  gap: 14px;
+}
+
+.archi__cats h3 {
+  font-size: 18px;
+}
+
+.archi__cats .chips {
+  margin-top: 6px;
+}
+
+/* Caractéristique absente des listes : contour pointillé */
+.chips span.is-missing {
+  border-style: dashed;
+  border-width: 2px;
+  font-weight: 700;
+}
+
+.archi-table td:first-child {
+  font-family: var(--font);
+  font-weight: 700;
+}
+
+/* Preuve Docker : le gorille à gauche, les mesures à droite */
+.docker {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.docker__img {
+  width: 100%;
+  height: auto;
+}
+
+.bar--wide {
+  grid-template-columns: 90px 1fr 170px;
+}
+
+.docker__table {
+  font-size: 16px;
+}
+
+/* Code avant / après côte à côte */
+.code-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.code-duo__label {
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.code-duo pre {
+  margin: 0 0 8px;
+  font-size: 15px !important;
+  line-height: 1.45 !important;
+}
+
+.api-call {
+  display: block;
+  margin-top: 14px;
+  padding: 8px 10px;
+  border: 2px solid var(--line);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Précision sous le libellé d'une barre */
+.bar__hint {
+  display: block;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* US-A : texte de la user story plus petit pour aérer la slide */
+.box p.usa__story {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Les 4 dimensions de l'architecture, les caractéristiques mises en avant */
+.sa {
+  display: grid;
+  gap: 24px;
+}
+
+.sa__parts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 4px solid var(--line);
+}
+
+.sa__parts span {
+  padding: 18px 12px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  border-right: 4px solid var(--line);
+}
+
+.sa__parts span:last-child {
+  border-right: 0;
+}
+
+.sa__parts span.is-hl {
+  background: var(--hl);
+  color: var(--onhl);
+}
+
+.sa .archi__rules {
+  font-size: 22px;
+}
+
+.sa {
+  grid-template-columns: 220px 1fr;
+  align-items: start;
+}
+
+.sa__cover {
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--line);
+}
+
+/* Schéma « bâtiment » de l'architecture, d'après Richards et Ford */
+.house {
+  position: relative;
+  padding: 34px 56px 34px;
+}
+
+.house__top,
+.house__bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.house__top { top: 0; }
+.house__bottom { bottom: 0; color: var(--muted); }
+
+.house__left,
+.house__right {
+  position: absolute;
+  top: 50%;
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.house__left { left: 22px; transform: translate(-50%, -50%) rotate(-90deg); }
+.house__right { right: 22px; transform: translate(50%, -50%) rotate(90deg); }
+
+.house__frame {
+  border-left: 16px solid var(--fg);
+  border-right: 16px solid var(--fg);
+}
+
+.house__chars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px 24px;
+  padding: 24px 28px;
+  text-align: center;
+}
+
+.house__chars span {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.house__chars span.is-missing {
+  padding: 2px 0;
+  border: 2px dashed var(--line);
+  background: var(--hl);
+  color: var(--onhl);
+}
+
+.house__floor {
+  display: flex;
+  justify-content: space-evenly;
+  height: 36px;
+  border-top: 16px solid var(--fg);
+}
+
+.house__floor i {
+  width: 16px;
+  background: var(--fg);
+}
+
+/* Définition de fitness function */
+.ff-def {
+  margin-top: 4px;
+  padding: 10px 16px;
+  border-left: 8px solid var(--hl);
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+/* Une fitness function : l'exigence et le seuil à gauche, l'exemple de code à droite */
+.ff {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.ff__side {
+  display: grid;
+  gap: 16px;
+}
+
+.ff__side .box p {
+  font-size: 18px;
+}
+
+.ff pre {
+  margin: 0;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+/* Résultats Letterflop par caractéristique */
+.lf-result ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.lf-result li {
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.lf-result small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Multi-stage build : le Dockerfile et les gains par image */
+.ms {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 20px;
+  align-items: start;
+}
+
+.ms pre {
+  margin: 0;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+.ms__gains {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.ms__gains strong {
+  display: block;
+  font-size: 20px;
+}
+
+/* Result plutôt que throw */
+.rt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.rt pre {
+  margin: 0 0 12px;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+.rt__table {
+  font-size: 16px;
+}
+
+.rt__nuance {
+  padding: 10px 14px;
+  border-left: 8px solid var(--hl);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Une réalisation Letterflop par carte */
+.lf-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lf-card h3 {
+  margin: 0;
+}
+
+.lf-card p {
+  font-size: 18px;
+}
+
+.lf-card__crit {
+  margin-top: auto;
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Choix du langage : barres d'énergie et nuances */
+.lang {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 32px;
+  align-items: start;
+}
+
+.bars--lang {
+  gap: 8px;
+}
+
+.bars--lang .bar {
+  grid-template-columns: 120px 1fr 80px;
+  gap: 12px;
+  font-size: 17px;
+}
+
+.bars--lang .bar__track {
+  height: 22px;
+  border-width: 2px;
+}
+
+.bars--lang .bar__value {
+  font-size: 20px;
+}
+
+.lang__notes {
+  display: grid;
+  gap: 14px;
+}
+
+.lang__notes p {
+  margin: 0;
+  padding-left: 12px;
+  border-left: 6px solid var(--hl);
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+/* Ce qui a été fait, en une ligne de code */
+.lf-how pre {
+  margin: 0;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  white-space: pre-wrap;
+}
+
+.checklist li {
+  margin: 4px 0;
+  font-size: 16px;
+}
+
+/* Nuance sous la règle Result / throw */
+.slidev-layout p.rt__warning {
+  max-width: none;
+  width: 100%;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: 2px dashed var(--line);
+  font-size: 15px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Promo de l'atelier RGESN en action */
+.promo {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.promo__visual {
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--line);
+}
+.slidev-layout p.promo__pitch {
+  margin: 0 0 16px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.promo__facts {
+  margin: 0 0 20px;
+  padding-left: 20px;
+  list-style: square;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.promo__link {
+  display: inline-block;
+  padding: 8px 14px;
+  background: var(--hl);
+  color: var(--onhl);
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Rust qu'on réécrit, Python qui explose */
+.rp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.rp__col h3 {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+.rp__stat {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding: 10px 0;
+  border-top: 2px solid var(--line);
+}
+.rp__stat .figure {
+  font-size: 36px;
+}
+.slidev-layout .rp__stat p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+/* Valeur 03 : l'empreinte qui dérive */
+.drift {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  height: 330px;
+}
+.drift__col {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  justify-items: stretch;
+  text-align: center;
+}
+.drift__score {
+  font-size: 28px;
+  font-weight: 700;
+}
+.drift__col > .drift__bar {
+  align-self: end;
+  background: var(--fg);
+  border: 2px solid var(--line);
+}
+.drift__col:nth-child(n + 5) > .drift__bar {
+  background: repeating-linear-gradient(135deg, var(--fg) 0 4px, transparent 4px 12px);
+}
+.drift__label {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 17px;
+}
+.drift__why {
+  min-height: 2.8em;
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+/* Valeur 03 : le pipeline qui bloque */
+.gate {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.gate__step {
+  flex: 1;
+  padding: 14px 8px;
+  border: 3px solid var(--line);
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.25;
+}
+.gate__step small {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+}
+.gate__step--eco {
+  background: var(--hl);
+  color: var(--onhl);
+}
+.gate__step--eco.is-failed {
+  background: var(--fg);
+  color: var(--bg);
+}
+.gate__step--eco.is-failed::before {
+  content: '✗ ';
+}
+.gate__step--eco.is-failed small {
+  color: var(--bg);
+}
+.gate__step--end {
+  border-style: dashed;
+}
+.gate__arrow {
+  font-size: 22px;
+  font-weight: 700;
+}
+.gate__detail {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 32px;
+  align-items: start;
+}
+.gate__detail pre {
+  margin: 0;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+/* Valeur 03 : le cliquet */
+.ratchet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: end;
+}
+.ratchet__step {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  border: 4px solid var(--line);
+}
+.ratchet__step:nth-child(1) { min-height: 200px; }
+.ratchet__step:nth-child(2) { min-height: 250px; }
+.ratchet__step:nth-child(3) { min-height: 300px; }
+.ratchet__step--goal {
+  background: var(--hl);
+  color: var(--onhl);
+}
+.ratchet__phase {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.slidev-layout .ratchet__step p {
+  margin: auto 0 0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* Valeur 03 : le badge */
+.badge-demo {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.badge-demo__site {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 20px 0;
+  border: 3px solid var(--line);
+}
+.badge-demo__line {
+  height: 14px;
+  background: var(--line);
+  opacity: 0.15;
+}
+.badge-demo__line--short {
+  width: 60%;
+}
+.badge-demo__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+  padding: 14px 0;
+  border-top: 2px solid var(--line);
+}
+.badge-demo__badge {
+  display: inline-flex;
+  border: 2px solid var(--line);
+  font-size: 15px;
+  font-weight: 700;
+}
+.badge-demo__badge span {
+  padding: 4px 10px;
+}
+.badge-demo__badge strong {
+  padding: 4px 12px;
+  background: var(--hl);
+  color: var(--onhl);
+}
+.badge-demo__link {
+  font-size: 14px;
+  text-decoration: underline;
+}
+.slidev-layout p.badge-demo__caption {
+  margin: 10px 0 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+.badge-demo__body .rp__stat {
+  grid-template-columns: 170px 1fr;
+}
+.badge-demo__body pre {
+  margin: 12px 0 0;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* Valeur 03 : la page « Notre empreinte » */
+.footprint__window {
+  border: 3px solid var(--line);
+}
+.footprint__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-bottom: 3px solid var(--line);
+}
+.footprint__bar span {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+}
+.footprint__bar code {
+  margin-left: 12px;
+  font-size: 13px;
+}
+.footprint__page {
+  padding: 16px 24px 20px;
+}
+.footprint__page h3 {
+  margin: 0 0 12px;
+}
+.footprint__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.footprint__grid h4 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 700;
+}
+.footprint__grid ul {
+  margin: 0;
+  padding-left: 18px;
+  list-style: square;
+}
+.slidev-layout .footprint__grid li {
+  font-size: 16px;
+  line-height: 1.45;
+}
+.footprint__fake-link {
+  text-decoration: underline;
+}
+
+/* Valeur 03 : les benchmarks */
+.bench {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.bench .box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bench h3 {
+  margin: 0;
+  font-size: 22px;
+}
+.bench__kind {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.bench__row {
+  display: grid;
+  grid-template-columns: 1fr auto 80px;
+  gap: 14px;
+  align-items: baseline;
+  padding: 8px 0;
+  border-top: 2px solid var(--line);
+  font-size: 18px;
+}
+.bench__row strong {
+  font-size: 24px;
+}
+.bench__row .mark {
+  justify-self: end;
+  font-weight: 700;
+}
+.slidev-layout .bench .box p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.slidev-layout p.gate__fail {
+  max-width: none;
+  margin: 18px 0 0;
+  font-size: 20px;
+}
+.gate__detail--codes,
+.gate__detail {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Valeur 03 : le rapport GreenIT */
+.report {
+  display: grid;
+  grid-template-columns: 900px 1fr;
+  gap: 14px 32px;
+  align-items: start;
+}
+.report__img--main,
+.report__imgs {
+  grid-column: 1;
+}
+.report__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--line);
+}
+.slidev-layout p.report__lead {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.4;
+}
+
+/* Valeur 03 : un seuil ambitieux */
+.ambition {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.ambition .box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ambition h3 {
+  margin: 0;
+}
+.ambition__tag {
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.slidev-layout .ambition .box p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+
+.lf-card .figure sub {
+  font-size: 0.5em;
+  vertical-align: baseline;
+}

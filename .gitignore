@@ -4,3 +4,5 @@
 # slides
 dist
 node_modules
+exports
+.slidev
